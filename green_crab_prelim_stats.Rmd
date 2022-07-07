@@ -1,4 +1,55 @@
-```{read in}
-prelim_gc_data.csv <- read.csv
+```{r data read in}
+
+# read in relevant documents for this data
+gc_dat <- read.csv("./prelim_gc_data.csv")
+
+# libraries for data visualization
+library(ggplot2)
+library(gridExtra)
+library(scatterplot3d)
+library(MASS)
 ```
 
+```{r RI vs. Calcium Plot}
+
+plot( Ca ~ RI, data = gc_dat, 
+      main = "RI vs. Calcium",
+      xlab = "Hemolymph RI (%)",
+      ylab = "Calcium (ppm)" )
+
+# correlation plot to look at RI vs. Calcium
+# doesn't appear to be a trend
+
+```
+
+```{r}
+
+boxplot( RI ~ Color, data = gc_dat, 
+      main = "RI vs. Hemolymph Color",
+      xlab = "Hemolymph Color (on a scale of 1-5)",
+      ylab = "Hemolymph RI (%)" )
+
+# box plot comparing average RIs for different colored hemolymph
+# appears that there are some differences between hemo RI 
+# if you want to make graph fancy: make different colors correspond 
+# to colors of hemolymph harvested
+```
+```{r Ca vs. color}
+
+boxplot( Ca ~ Color, data = gc_dat, 
+      main = "Calcium vs. Hemolymph Color",
+      xlab = "Hemolymph Color (on a scale of 1-5)",
+      ylab = "Calcium (ppm)" )
+
+# appears that calcium increases as hemolymph color darkens
+```
+```{r interaction effects of RI and Ca on hemo color}
+
+int_mod = lm(Color ~ RI + Ca,
+              data = gc_dat)
+
+int_mod
+
+# interaction model to assess whether or not hemolymph color is altered by
+# the interaction between RI and Ca
+```
