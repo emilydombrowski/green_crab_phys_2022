@@ -1,0 +1,4 @@
+```{read in}
+prelim_gc_data.csv <- read.csv
+```
+
