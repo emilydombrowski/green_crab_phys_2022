@@ -1,7 +1,7 @@
 ```{r data read in}
 
 # read in relevant documents for this data
-gc_dat <- read.csv("./prelim_gc_data.csv")
+gc_dat <- read.csv("../data/prelim_gc_data.csv")
 
 # libraries for data visualization
 library(ggplot2)

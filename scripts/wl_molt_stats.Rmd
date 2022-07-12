@@ -1,0 +1,65 @@
+```{r}
+
+molt_dat <- read.csv("../data/wl_molt_dat.csv")
+# read in .csv
+
+molt_dat
+
+```
+
+```{r}
+
+plot(hemo_ri ~ days_from_molt, data = molt_dat,
+     main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
+     xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph RI")
+abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+# plots hemo ri vs days from molt for all 13 crabs
+# need to reverse x axis to count down to molt
+# appears to be downward trend in hemolymph RI as crabs approach molt
+# need to investigate on an individual level
+```
+
+```{r}
+
+plot(hemo_color ~ days_from_molt, data = molt_dat,
+     main = "Hemolymph Color as Green Crabs Approach Molt (n=13)",
+     xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph Color")
+abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+# plots hemo color vs days from molt for all 13 crabs
+# need to reverse x axis to count down to molt
+# doesn't appear to be strong trend or correlation
+
+```
+```{r}
+
+par(mar = c(5, 4, 4, 4) + 0.3)
+plot(hemo_ri ~ days_from_molt, data = molt_dat,
+     main = "Hemolymph RI and Color as Green Crabs Approach Molt (n=13)",
+     xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph RI",
+     pch = 16, col = 2)
+abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+par(new = TRUE)                             
+plot(hemo_color ~ days_from_molt, data = molt_dat,
+     xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt",
+     pch = 17, col =3,
+     axes = FALSE)
+abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 6, lwd = 3)
+axis(side = 4, at = pretty(range('hemo_color, data = molt_dat')))      
+mtext("Hemolymph Color", side = 4, line = 3) 
+
+
+# overlaid two graphs to see hemo ri and color trends 
+# some issues to resolve still 
+```
+
+
+
