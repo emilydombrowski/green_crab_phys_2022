@@ -23,5 +23,5 @@ My results are in the form of box plots, linear models, and power analyses.
 
 Acknowledgements: Special thanks to Emma Spies and Gordon Shannon for help with
 data collection. I would like to thank all members of the Wells NERR: Dr.
-Jason Goldstein, Laura Crane, Dr. Jeremy Miller, Dr. Ben Guzler, Emily Burke,
+Jason Goldstein, Laura Crane, Dr. Jeremy Miller, Dr. Ben Gutzler, Emily Burke,
 Abigail Lemmon, and Claire White. This research was supported by NOAA. 
