@@ -3,7 +3,8 @@
 molt_dat <- read.csv("../data/wl_molt_dat.csv")
 # read in .csv
 
-molt_dat
+library(car)
+# load relevant libraries for stats analysis
 ```
 
 ```{r ri and days to molt plot}
@@ -19,6 +20,16 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # need to reverse x axis to count down to molt
 # appears to be downward trend in hemolymph RI as crabs approach molt
 # need to investigate on an individual level
+```
+
+```{r}
+ri_mod <- lm(hemo_ri ~ days_from_molt, data = molt_dat)
+summary(ri_mod)
+anova(ri_mod)
+car::Anova(ri_mod, type = 3)
+
+# linear models for significance testing 
+
 ```
 
 ```{r hemo color and days to molt plot}
