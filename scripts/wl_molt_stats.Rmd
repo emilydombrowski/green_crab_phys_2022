@@ -22,7 +22,7 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # need to investigate on an individual level
 ```
 
-```{r}
+```{r ri days from molt anova}
 ri_mod <- lm(hemo_ri ~ days_from_molt, data = molt_dat)
 summary(ri_mod)
 anova(ri_mod)
@@ -46,6 +46,18 @@ abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # doesn't appear to be strong trend or correlation
 
 ```
+
+```{r }
+
+col_mod <- lm(hemo_color ~ days_from_molt, data = molt_dat)
+summary(col_mod)
+anova(col_mod)
+car::Anova(col_mod, type = 3)
+
+# linear models for significance testing 
+
+```
+
 ```{r overlay of hemo color and days to molt plot}
 
 par(mar = c(5, 4, 4, 4) + 0.3)
