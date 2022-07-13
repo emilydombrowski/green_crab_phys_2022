@@ -1,5 +1,4 @@
-# green_crab_phys_2022: Using Hemolymph Chemistry to Predict and Assess Molting
-in Green Crabs, Carcinus maenas
+# green_crab_phys_2022: Using Hemolymph Chemistry to Predict and Assess Molting in Green Crabs, Carcinus maenas
 
 Objective: Develop a molting identification assay to aid in pre-molt stage 
 identification in invasive green crabs
