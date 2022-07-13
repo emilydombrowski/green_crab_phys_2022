@@ -1,18 +1,20 @@
-# green_crab_phys_2022
+# green_crab_phys_2022: Using Hemolymph Chemistry to Predict and Assess Molting
+in Green Crabs, Carcinus maenas
 
-Project title: Using Hemolymph Chemistry to Predict and Assess Molting in Green Crabs, Carcinus maenas
+Objective: Develop a molting identification assay to aid in pre-molt stage 
+identification in invasive green crabs
 
-Objective: Develop a molting identification assay to aid in pre-molt stage identification in invasive green crabs
-
-Folders: (not set up yet)
+Folders: 
+* data: contains .csv files with relevant data for project
+* scripts: contains .Rmd file used to generate graphs and code
+* figs: contains .html output for project figures
 
 Project repository for data collected about GC hemolymph physiology. This
 project was a study conducted over a 10 week period in 2022. The questions 
 this study sought to assess are:
 
--How can biochemical parameters in hemolymph be used to predict molting?
-
--Are hemolymph RI, color, and calcium levels correlated?
+* How can biochemical parameters in hemolymph be used to predict molting?
+* Are hemolymph RI, color, and calcium levels correlated?
 
 The structure for this code base is R. All data can be found (refine data
 structuring). Files are stored in the .csv format. Data files contain
