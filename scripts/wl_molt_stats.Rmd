@@ -4,6 +4,8 @@ molt_dat <- read.csv("../data/wl_molt_dat.csv")
 # read in .csv
 
 library(car)
+library(ggplot2)
+library(dplyr)
 # load relevant libraries for stats analysis
 ```
 
@@ -13,13 +15,59 @@ plot(hemo_ri ~ days_from_molt, data = molt_dat,
      main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
      xlim = rev(range(days_from_molt)),
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
+     ylab = "Hemolymph RI",
+     type = "b")
 abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 
 # plots hemo ri vs days from molt for all 13 crabs
 # need to reverse x axis to count down to molt
 # appears to be downward trend in hemolymph RI as crabs approach molt
 # need to investigate on an individual level
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+molt_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri, colour = crab_id)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_line() + 
+        # specifies type of plot
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph RI") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13") +
+        # renames x and y labels and title
+        labs(col = "Crab ID") 
+        # changes legend title
+```
+
+```{r}
+library(ggplot2)
+library(dplyr)
+
+molt_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri, colour = crab_id)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_line() + 
+        # specifies type of plot
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph RI") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13") +
+        # renames x and y labels and title
+        labs(col = "Crab ID") + 
+        # changes legend title
+        theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(), 
+              panel.background = element_blank())
+        # removes background grid from plot
+
 ```
 
 ```{r ri days from molt anova}
@@ -89,100 +137,86 @@ mtext("Hemolymph Color", side = 4, line = 3)
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGB",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGB"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGG",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGG"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGB",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGB"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGY"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBKR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBKR"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBWK",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBWK"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBYB",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBYB"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGBR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGBR"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGBY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGBY"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGGW",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGGW"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGGY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGGY"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGKG",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGKG"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGKR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGKR"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGW",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph Color")
-abline(lm (hemo_color ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGW"), col = 4, lwd = 3)
+     ylab = "Hemolymph Color",
+     type = "b")
 ```
 
 ```{r individual ri graphs over time}
@@ -192,99 +226,84 @@ abline(lm (hemo_color ~ days_from_molt, data = molt_dat,
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGB",
-     xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGB"), col = 4, lwd = 3)
+     xlab = "Days From Molt",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGG",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGG"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGB",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGB"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBGY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBGY"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBKR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBKR"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBWK",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBWK"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GBYB",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GBYB"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGBR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGBR"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGBY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGBY"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGGW",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGGW"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGGY",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGGY"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGKG",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGKG"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGKR",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGKR"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      subset = crab_id == "GGW",
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
-abline(lm (hemo_ri ~ days_from_molt, data = molt_dat, 
-           subset = crab_id == "GGW"), col = 4, lwd = 3)
+     ylab = "Hemolymph RI",
+     type = "b")
 ```
