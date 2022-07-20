@@ -1,4 +1,4 @@
-```{r}
+```{r .csv and library read in}
 
 molt_dat <- read.csv("../data/wl_molt_dat.csv")
 # read in .csv
@@ -9,7 +9,7 @@ library(dplyr)
 # load relevant libraries for stats analysis
 ```
 
-```{r ri and days to molt plot}
+```{r ri and days to molt r plot}
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
@@ -25,7 +25,7 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # need to investigate on an individual level
 ```
 
-```{r}
+```{r hemo ri vs days from molt ggplot with gridded background}
 library(ggplot2)
 library(dplyr)
 
@@ -45,7 +45,7 @@ molt_dat %>%
         # changes legend title
 ```
 
-```{r}
+```{r hemo ri vs days from molt ggplot without gridded background}
 library(ggplot2)
 library(dplyr)
 
@@ -95,7 +95,27 @@ abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 
 ```
 
-```{r }
+```{r hemo color vs days from molt ggplot with gridded background}
+library(ggplot2)
+library(dplyr)
+
+molt_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_color, colour = crab_id)) + 
+        # populates plot with hemo color info and defines color with crab ID
+    geom_point() + geom_line() + 
+        # specifies type of plot
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph Color") +
+        ggtitle("Hemolymph color as green crabs approach molt (n = 13") +
+        # renames x and y labels and title
+        labs(col = "Crab ID")
+        # changes legend title
+```
+
+```{r hemo color anova}
 
 col_mod <- lm(hemo_color ~ days_from_molt, data = molt_dat)
 summary(col_mod)
