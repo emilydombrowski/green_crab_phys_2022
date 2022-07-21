@@ -25,7 +25,44 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # need to investigate on an individual level
 ```
 
+```{r ggplot scatter plot}
+
+molt_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_smooth(method=lm) + 
+        # specifies type of plot -- linear model with 95 percent confidence
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph RI") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)")
+        # renames x and y labels and title
+
+```
+
+
+```{r}
+
+molt_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_smooth(method=lm, se=FALSE) + 
+        # specifies type of plot -- linear model without confidence int
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph RI") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)")
+        # renames x and y labels and title
+
+
+```
+
 ```{r hemo ri vs days from molt ggplot with gridded background}
+
 library(ggplot2)
 library(dplyr)
 
@@ -34,12 +71,12 @@ molt_dat %>%
   ggplot(aes(x = days_from_molt, y = hemo_ri, colour = crab_id)) + 
         # populates plot with hemo ri info and defines color with crab ID
     geom_point() + geom_line() + 
-        # specifies type of plot
+        # specifies type of plot - scatter linear plot with crab IDs
         scale_x_reverse() + 
         # reverses x axis so information counts down to molt
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
-        ggtitle("Hemolymph RI as green crabs approach molt (n = 13") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)") +
         # renames x and y labels and title
         labs(col = "Crab ID") 
         # changes legend title
@@ -53,13 +90,13 @@ molt_dat %>%
         # pipes molt data into ggplot
   ggplot(aes(x = days_from_molt, y = hemo_ri, colour = crab_id)) + 
         # populates plot with hemo ri info and defines color with crab ID
-    geom_point() + geom_line() + 
-        # specifies type of plot
+    geom_point() + geom_line() +
+        # specifies type of plot - scatter linear plot with crab ids
         scale_x_reverse() + 
         # reverses x axis so information counts down to molt
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
-        ggtitle("Hemolymph RI as green crabs approach molt (n = 13") +
+        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)") +
         # renames x and y labels and title
         labs(col = "Crab ID") + 
         # changes legend title
@@ -150,6 +187,7 @@ mtext("Hemolymph Color", side = 4, line = 3)
 # overlaid two graphs to see hemo ri and color trends 
 # some issues to resolve still; look at r graph gallery and gg plot
 ```
+
 ```{r individual crab hemo color trends over time}
 
 # individual hemo color graphs over time
