@@ -31,18 +31,20 @@ gc_dat %>%
     geom_point() + geom_smooth(method=lm) + 
         # specifies type of plot -- linear model with 95 percent confidence
         xlab("Hemolymph RI") + 
-        ylab ("Calcium (ppm)")
-        ggtitle("Hemolymph RI vs. Calcium")
+        ylab ("Calcium (ppm)") +
+        ggtitle("Hemolymph RI vs. Calcium, (n=66)") +
         # renames x and y labels and title
+      xlim(3, 12)
 ```
 
 ```{r}
-molt_dat
 
-ca_ri_mod <- lm(Ca ~ RI, data = molt_dat)
+ca_ri_mod <- lm(Ca ~ RI, data = gc_dat)
+nobs(ca_ri_mod) # tells that there are 66 observations used in this model
 summary(ca_ri_mod)
 anova(ca_ri_mod)
 car::Anova(ca_ri_mod, type = 3)
+
 ```
 
 ```{r}
@@ -57,6 +59,7 @@ boxplot( RI ~ Color, data = gc_dat,
 # if you want to make graph fancy: make different colors correspond 
 # to colors of hemolymph harvested
 ```
+
 ```{r Ca vs. color}
 
 boxplot( Ca ~ Color, data = gc_dat, 
@@ -66,6 +69,7 @@ boxplot( Ca ~ Color, data = gc_dat,
 
 # appears that calcium increases as hemolymph color darkens
 ```
+
 ```{r interaction effects of RI and Ca on hemo color}
 
 ri_col_mod = lm(Color ~ RI + Ca + RI:Ca,
