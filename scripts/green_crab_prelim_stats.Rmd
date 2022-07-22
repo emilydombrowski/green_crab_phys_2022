@@ -12,14 +12,37 @@ library(MASS)
 
 ```{r RI vs. Calcium Plot}
 
-plot( Ca ~ RI, data = gc_dat, 
+plot(Ca ~ RI, data = gc_dat, 
       main = "RI vs. Calcium",
       xlab = "Hemolymph RI (%)",
-      ylab = "Calcium (ppm)" )
+      ylab = "Calcium (ppm)")
+abline(lm (Ca ~ RI, data = gc_dat), col = 4, lwd = 3)
 
 # correlation plot to look at RI vs. Calcium
 # doesn't appear to be a trend
 
+```
+
+```{r}
+gc_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = RI, y = Ca)) + 
+        # populates plot with hemo ri and ca info
+    geom_point() + geom_smooth(method=lm) + 
+        # specifies type of plot -- linear model with 95 percent confidence
+        xlab("Hemolymph RI") + 
+        ylab ("Calcium (ppm)")
+        ggtitle("Hemolymph RI vs. Calcium")
+        # renames x and y labels and title
+```
+
+```{r}
+molt_dat
+
+ca_ri_mod <- lm(Ca ~ RI, data = molt_dat)
+summary(ca_ri_mod)
+anova(ca_ri_mod)
+car::Anova(ca_ri_mod, type = 3)
 ```
 
 ```{r}
@@ -45,10 +68,12 @@ boxplot( Ca ~ Color, data = gc_dat,
 ```
 ```{r interaction effects of RI and Ca on hemo color}
 
-int_mod = lm(Color ~ RI + Ca,
+ri_col_mod = lm(Color ~ RI + Ca + RI:Ca,
               data = gc_dat)
 
-int_mod
+summary(ri_col_mod)
+anova(ri_col_mod)
+car::Anova(ri_col_mod, type = 3)
 
 # interaction model to assess whether or not hemolymph color is altered by
 # the interaction between RI and Ca
