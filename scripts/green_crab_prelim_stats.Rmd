@@ -5,6 +5,7 @@ gc_dat <- read.csv("../data/prelim_gc_data.csv")
 
 # libraries for data visualization
 library(ggplot2)
+library(dplyr)
 library(gridExtra)
 library(scatterplot3d)
 library(MASS)
@@ -24,6 +25,7 @@ abline(lm (Ca ~ RI, data = gc_dat), col = 4, lwd = 3)
 ```
 
 ```{r}
+
 gc_dat %>% 
         # pipes molt data into ggplot
   ggplot(aes(x = RI, y = Ca)) + 
@@ -35,6 +37,7 @@ gc_dat %>%
         ggtitle("Hemolymph RI vs. Calcium, (n=66)") +
         # renames x and y labels and title
       xlim(3, 12)
+
 ```
 
 ```{r}
