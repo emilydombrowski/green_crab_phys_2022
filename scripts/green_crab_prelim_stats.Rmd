@@ -3,6 +3,8 @@
 # read in relevant documents for this data
 gc_dat <- read.csv("../data/prelim_gc_data.csv")
 
+gc_dat
+
 # libraries for data visualization
 library(ggplot2)
 library(dplyr)
@@ -56,6 +58,8 @@ boxplot( RI ~ Color, data = gc_dat,
       main = "RI vs. Hemolymph Color",
       xlab = "Hemolymph Color (on a scale of 1-5)",
       ylab = "Hemolymph RI (%)" )
+
+boxplot( Color ~ RI, data = gc_dat)
 
 # box plot comparing average RIs for different colored hemolymph
 # appears that there are some differences between hemo RI 
