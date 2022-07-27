@@ -1,0 +1,11 @@
+```{r}
+
+se_dat <- read.csv("../data/start_end.csv")
+se_dat
+
+```
+
+```{r}
+
+boxplot()
+```

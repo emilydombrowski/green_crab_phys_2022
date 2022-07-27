@@ -2,11 +2,8 @@
 
 # read in relevant documents for this data
 gc_dat <- read.csv("../data/prelim_gc_data.csv")
-#  updated with full data set 2022-07-27
-gc_dat
 
-as.numeric(gc_dat$Ca)
-as.numeric(gc_dat$RI)
+#  updated with full data set 2022-07-27
 
 # libraries for data visualization
 library(ggplot2)
