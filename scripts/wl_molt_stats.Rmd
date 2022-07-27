@@ -2,6 +2,13 @@
 
 molt_dat <- read.csv("../data/wl_molt_dat.csv")
 # read in .csv
+# contains information from WL 2022
+# used for preliminary graphs
+
+molt_dat_2 <- read.csv("../data/wl_cml_molt_dat.csv")
+# read in updated .csv
+# contains information from 2021, 2022, CML, and WL
+
 
 library(dplyr)
 library(car)
@@ -10,6 +17,8 @@ library(ggplot2)
 ```
 
 ```{r ri and days to molt r plot}
+
+# 2022 WL crabs
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat,
      main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
@@ -25,7 +34,21 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # need to investigate on an individual level
 ```
 
+```{r}
+# WL and CML 2021-2022
+
+plot(hemo_ri ~ days_from_molt, data = molt_dat_2,
+     main = "Hemolymph RI as Green Crabs Approach Molt (n=36)",
+     xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph RI")
+abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+```
+
 ```{r ggplot scatter plot}
+
+# WL 2022 data
 
 molt_dat %>% 
         # pipes molt data into ggplot
@@ -45,6 +68,7 @@ molt_dat %>%
 
 ```{r}
 
+# WL 2022 data
 molt_dat %>% 
         # pipes molt data into ggplot
   ggplot(aes(x = days_from_molt, y = hemo_ri)) + 
@@ -62,6 +86,8 @@ molt_dat %>%
 ```
 
 ```{r hemo ri vs days from molt ggplot with gridded background}
+
+# WL 2022 data
 
 library(ggplot2)
 library(dplyr)
@@ -83,6 +109,9 @@ molt_dat %>%
 ```
 
 ```{r hemo ri vs days from molt ggplot without gridded background}
+
+# WL 2022 data
+
 library(ggplot2)
 library(dplyr)
 
@@ -108,6 +137,9 @@ molt_dat %>%
 ```
 
 ```{r ri days from molt anova}
+
+# WL 2022 data
+
 ri_mod <- lm(hemo_ri ~ days_from_molt, data = molt_dat)
 summary(ri_mod)
 anova(ri_mod)
@@ -118,7 +150,22 @@ car::Anova(ri_mod, type = 3)
 
 ```
 
+```{r}
+# CML WL all data
+
+ri_mod <- lm(hemo_ri ~ days_from_molt, data = molt_dat_2)
+summary(ri_mod)
+anova(ri_mod)
+car::Anova(ri_mod, type = 3)
+
+# linear models for significance testing 
+# r square of 0.22 -- weak correlation
+
+```
+
 ```{r hemo color and days to molt plot}
+
+# WL 2022 data
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,
      main = "Hemolymph Color as Green Crabs Approach Molt (n=13)",
@@ -137,6 +184,9 @@ boxplot(days_from_molt ~ hemo_color, data = molt_dat)
 ```
 
 ```{r hemo color vs days from molt ggplot with gridded background}
+
+# WL 2022 data
+
 library(ggplot2)
 library(dplyr)
 
@@ -158,6 +208,8 @@ molt_dat %>%
 
 ```{r hemo color anova}
 
+# WL 2022 data
+
 col_mod <- lm(hemo_color ~ days_from_molt, data = molt_dat)
 summary(col_mod)
 anova(col_mod)
@@ -170,6 +222,7 @@ car::Anova(col_mod, type = 3)
 
 ```{r individual crab hemo color trends over time}
 
+# WL 2022 data
 # individual hemo color graphs over time
 
 plot(hemo_color ~ days_from_molt, data = molt_dat,

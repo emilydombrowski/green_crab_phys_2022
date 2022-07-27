@@ -2,8 +2,11 @@
 
 # read in relevant documents for this data
 gc_dat <- read.csv("../data/prelim_gc_data.csv")
-
+#  updated with full data set 2022-07-27
 gc_dat
+
+as.numeric(gc_dat$Ca)
+as.numeric(gc_dat$RI)
 
 # libraries for data visualization
 library(ggplot2)
@@ -15,10 +18,8 @@ library(MASS)
 
 ```{r RI vs. Calcium Plot}
 
-plot(Ca ~ RI, data = gc_dat, 
-      main = "RI vs. Calcium",
-      xlab = "Hemolymph RI (%)",
-      ylab = "Calcium (ppm)")
+plot(Ca ~ RI, data = gc_dat, main = "RI vs. Calcium",
+      xlab = "Hemolymph RI (%)", ylab = "Calcium (ppm)")
 abline(lm (Ca ~ RI, data = gc_dat), col = 4, lwd = 3)
 
 # correlation plot to look at RI vs. Calcium
@@ -36,7 +37,7 @@ gc_dat %>%
         # specifies type of plot -- linear model with 95 percent confidence
         xlab("Hemolymph RI") + 
         ylab ("Calcium (ppm)") +
-        ggtitle("Hemolymph RI vs. Calcium, (n=66)") +
+        ggtitle("Hemolymph RI vs. Calcium, (n=127)") +
         # renames x and y labels and title
       xlim(3, 12)
 
@@ -45,7 +46,7 @@ gc_dat %>%
 ```{r}
 
 ca_ri_mod <- lm(Ca ~ RI, data = gc_dat)
-nobs(ca_ri_mod) # tells that there are 66 observations used in this model
+nobs(ca_ri_mod) # tells that there are 127 observations used in this model
 summary(ca_ri_mod)
 anova(ca_ri_mod)
 car::Anova(ca_ri_mod, type = 3)
@@ -54,10 +55,10 @@ car::Anova(ca_ri_mod, type = 3)
 
 ```{r}
 
-boxplot( RI ~ Color, data = gc_dat, 
-      main = "RI vs. Hemolymph Color",
-      xlab = "Hemolymph Color (on a scale of 1-5)",
-      ylab = "Hemolymph RI (%)" )
+boxplot( RI ~ Color, data = gc_dat,
+         main = "RI vs. Hemolymph Color", 
+         xlab = "Hemolymph Color (on a scale of 1-5)", 
+         ylab = "Hemolymph RI (%)" )
 
 boxplot( Color ~ RI, data = gc_dat)
 
@@ -72,7 +73,7 @@ boxplot( Color ~ RI, data = gc_dat)
 boxplot( Ca ~ Color, data = gc_dat, 
       main = "Calcium vs. Hemolymph Color",
       xlab = "Hemolymph Color (on a scale of 1-5)",
-      ylab = "Calcium (ppm)" )
+      ylab = "Calcium (ppm)")
 
 # appears that calcium increases as hemolymph color darkens
 ```

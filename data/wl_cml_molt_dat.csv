@@ -1,4 +1,4 @@
-﻿date,condo_id,crab_id,sex,hemo_color,hemo_ri,status,shell_hardness,cw_post_molt,mass_post_molt,digital_ri,ca,days_to_molt
+﻿date,condo_id,crab_id,sex,hemo_color,hemo_ri,status,shell_hardness,cw_post_molt,mass_post_molt,digital_ri,ca,days_from_molt
 6/10/21,WL,BGBG,M,NA,NA,A,3,NA,NA,NA,NA,21.00
 6/14/21,WL,BGBG,M,NA,10.5,A,3,NA,NA,NA,NA,17.00
 6/18/21,WL,BGBG,M,NA,NA,A,3,NA,NA,NA,NA,13.00
