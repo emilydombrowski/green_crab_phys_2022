@@ -3,9 +3,9 @@
 molt_dat <- read.csv("../data/wl_molt_dat.csv")
 # read in .csv
 
+library(dplyr)
 library(car)
 library(ggplot2)
-library(dplyr)
 # load relevant libraries for stats analysis
 ```
 
@@ -126,6 +126,9 @@ plot(hemo_color ~ days_from_molt, data = molt_dat,
      xlab = "Days From Molt", 
      ylab = "Hemolymph Color")
 abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+
+boxplot(days_from_molt ~ hemo_color, data = molt_dat)
 
 # plots hemo color vs days from molt for all 13 crabs
 # need to reverse x axis to count down to molt
