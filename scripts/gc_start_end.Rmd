@@ -6,7 +6,7 @@ se_dat <- read.csv("../data/se.csv")
 
 se_dat$start_end <- factor(se_dat$start_end, levels = c('start', 'end'))
 se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
-                                                    'Molted'))
+                                                    'Molted', 'Intermolt'))
 # define levels as factors for later graphing
 
 end <- filter(se_dat, start_end == "end")
@@ -28,22 +28,12 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
 
 ```
 
-```{r initial hemolymph RI in differnt conditions}
-
-boxplot(hemo_ri ~ start_end:outcome, data = se_dat,
-        main = 'Initial Hemolymph Protein of Removed, Dead, and 
-        Molted Crabs', subset = start_end == "start",
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4','plum','springgreen4'))
-
-```
-
 ```{r}
 plot(hemo_ri ~ outcome, data=se_dat,
-        main = 'Initial Hemolymph Protein of Removed, Dead, and 
-        Molted Crabs', subset = start_end == "start",
+        main = 'Initial Hemolymph Protein in Green Crabs',
+        subset = start_end == "start",
         xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'plum', 'springgreen4'))
+        col= c('steelblue4', 'plum', 'springgreen4', '))
 ```
 
 ```{r}
