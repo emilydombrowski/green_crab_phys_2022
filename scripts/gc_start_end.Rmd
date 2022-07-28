@@ -1,11 +1,41 @@
 ```{r}
 
-se_dat <- read.csv("../data/start_end.csv")
+se_dat <- read.csv("../data/se.csv")
+# read in .csv
+
 se_dat
 
+se_dat$start_end <- factor(se_dat$start_end, levels = c('start', 'end'))
+se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
+                                                    'Molted'))
+
+library(ggplot2)
+library(forcats)
 ```
 
 ```{r}
-
-boxplot()
+boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
+        main = 'Start and end Hemolymph Protein of Molted, Dead, and 
+        Removed Crabs',
+        xlab = 'Condition', ylab = 'Hemolymph Protein',
+        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
+               'springgreen4'))
 ```
+
+```{r}
+boxplot(hemo_color ~ start_end:outcome, data=se_dat,
+        main = 'Start and end Hemolymph Color of Molted, Dead, and 
+        Removed Crabs',
+        xlab = 'Condition', ylab = 'Hemolymph Color',
+        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
+               'springgreen4'))
+```
+
+
+```{r}
+se_dat %>%
+ggplot(aes(x=start_end:outcome, y=hemo_ri)) +
+    geom_boxplot()
+
+```
+
