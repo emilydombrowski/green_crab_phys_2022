@@ -92,6 +92,12 @@ summary(ri_col_mod)
 anova(ri_col_mod)
 car::Anova(ri_col_mod, type = 3)
 
+ri_col_aov <- aov(Color ~ RI, data=gc_dat)
+summary(ri_col_aov)
+
+TukeyHSD(ri_col_aov) 
+# used for determining differnt significance among groups
+
 car::Anova(lm(Color ~ Ca, data = gc_dat), type = 3)
 car::Anova(lm(Color ~ RI, data = gc_dat), type = 3)
 
