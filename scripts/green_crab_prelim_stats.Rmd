@@ -3,6 +3,8 @@
 # read in relevant documents for this data
 gc_dat <- read.csv("../data/prelim_gc_data.csv")
 
+
+gc_dat
 #  updated with full data set 2022-07-27
 
 # libraries for data visualization
@@ -50,15 +52,17 @@ anova(ca_ri_mod) # standard anova
 car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
 
 # taken from all during molt cycle, leading to lots of variation
-# pointing to trend; small r^2 due to 
+# pointing to trend; small r^2 due to assessing crabs at different times of
+# molt cycle
 ```
 
 ```{r}
 
 boxplot( RI ~ Color, data = gc_dat,
-         main = "RI vs. Hemolymph Color", 
+         main = "Hemolymph Protein vs. Color in Green Crabs", 
          xlab = "Hemolymph Color (on a scale of 1-5)", 
-         ylab = "Hemolymph RI (%)" )
+         ylab = "Hemolymph RI (%)", 
+         col= c('white', 'aliceblue', 'bisque', 'coral', 'brown3'))
 
 boxplot(Color ~ RI, data = gc_dat)
 
@@ -73,9 +77,10 @@ plot(Color ~ RI, data = gc_dat)
 ```{r Ca vs. color}
 
 boxplot( Ca ~ Color, data = gc_dat, 
-      main = "Calcium vs. Hemolymph Color",
+      main = "Green Crab Hemolymph Calcium (ppm) vs. Color",
       xlab = "Hemolymph Color (on a scale of 1-5)",
-      ylab = "Calcium (ppm)")
+      ylab = "Calcium (ppm)",
+      col= c('white', 'aliceblue', 'bisque', 'coral'))
 
 # appears that calcium increases as hemolymph color darkens
 ```
@@ -88,6 +93,9 @@ ri_col_mod = lm(Color ~ RI + Ca + RI:Ca,
 summary(ri_col_mod)
 anova(ri_col_mod)
 car::Anova(ri_col_mod, type = 3)
+
+car::Anova(lm(Color ~ Ca, data = gc_dat), type = 3)
+car::Anova(lm(Color ~ RI, data = gc_dat), type = 3)
 
 # interaction model to assess whether or not hemolymph color is altered by
 # the interaction between RI and Ca

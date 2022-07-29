@@ -60,7 +60,7 @@ molt_dat %>%
         # reverses x axis so information counts down to molt
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
-        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)")
+        ggtitle("Hemolymph protein as green crabs approach molt")
         # renames x and y labels and title
 
 ```
@@ -125,7 +125,7 @@ molt_dat %>%
         # reverses x axis so information counts down to molt
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
-        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)") +
+        ggtitle("Hemolymph RI as green crabs approach molt") +
         # renames x and y labels and title
         labs(col = "Crab ID") + 
         # changes legend title
