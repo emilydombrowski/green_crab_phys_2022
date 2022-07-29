@@ -15,10 +15,15 @@ this study sought to assess are:
 * How can biochemical parameters in hemolymph be used to predict molting?
 * Are hemolymph RI, color, and calcium levels correlated?
 
-The structure for this code base is R. All data can be found (refine data
-structuring). Files are stored in the .csv format. Data files contain
+The structure for this code base is R. All data can be found in the data folder.
+Files are stored in the .csv format. Data files contain
 information about GC tag information, condo storage, hemolymph color, protein
-refractive index, and calcium levels.
+refractive index, and calcium levels from Wells Reserve (WL) and Coastal Marine
+Lab (CML).
+* Copy_Condo_dat_2022 contains raw data
+* prelim_gc_data contains information about calcium and digital RI information
+* se contains information about initial and final hemolymph levels
+* wl_cml_molt_dat contains molt tracking data
 
 My results are in the form of box plots, linear models, and power analyses.
 
