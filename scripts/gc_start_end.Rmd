@@ -15,10 +15,11 @@ start <- c(subset = se_dat$start_end == "start")
 
 library(ggplot2)
 library(dplyr)
+library(car)
 # load relevant libraries
 ```
 
-```{r initial vs final hemo RI}
+```{r initial vs final hemo RI in gc conditions}
 boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
         main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
         Molted Crabs',
@@ -28,12 +29,28 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
 
 ```
 
-```{r}
+```{r boxplot Initial Hemo Protein in GC conditions}
 plot(hemo_ri ~ outcome, data=se_dat,
         main = 'Initial Hemolymph Protein in Green Crabs',
         subset = start_end == "start",
         xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'plum', 'springgreen4', '))
+        col= c('steelblue4', 'plum', 'springgreen4'))
+
+# visualizes data looking at different conditions of gc against intermolt
+# data set; more internesting plots: look at just intermolt vs. molt
+```
+
+```{r sig testing Initial Hemo Protein in GC conditions}
+
+initial_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat, 
+                     subset = start_end == "start")
+# builds model to evaluate hemo ri vs. crab outcome
+
+plot(initial_ri_mod) # tests assumptions of normality
+summary(initial_ri_mod)
+anova(initial_ri_mod)
+car::Anova(initial_ri_mod, type = 3)
+
 ```
 
 ```{r}
@@ -45,10 +62,18 @@ boxplot(hemo_color ~ start_end:outcome, data=se_dat,
                'springgreen4'))
 
 ```
+
 ```{r}
 plot(hemo_color ~ outcome, data=se_dat, 
     main = 'Initial Hemolymph Color of Removed, Dead, and
     Molted Crabs', subset = start_end == "start",
     xlab = 'Condition', ylab = 'Hemolymph Color',
     col= c('steelblue4', 'plum', 'springgreen4'))
+
+plot(hemo_color ~ outcome, data=se_dat, 
+    main = 'Initial Hemolymph Color of Removed, Dead, and
+    Molted Crabs', subset = start_end == "start",
+    xlab = 'Condition', ylab = 'Hemolymph Color',
+    col= c('steelblue4', 'plum', 'springgreen4'),
+    drop )
 ```
