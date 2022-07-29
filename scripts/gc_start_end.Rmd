@@ -9,10 +9,6 @@ se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
                                                     'Molted', 'Intermolt'))
 # define levels as factors for later graphing
 
-end <- filter(se_dat, start_end == "end")
-start <- c(subset = se_dat$start_end == "start")
-# apply filters for later analyses
-
 library(ggplot2)
 library(dplyr)
 library(car)

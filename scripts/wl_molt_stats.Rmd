@@ -202,8 +202,11 @@ molt_dat %>%
         ylab ("Hemolymph Color") +
         ggtitle("Hemolymph color as green crabs approach molt (n = 13") +
         # renames x and y labels and title
-        labs(col = "Crab ID")
-        # changes legend title
+        labs(col = "Crab ID") + # changes legend title
+  theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(), 
+              panel.background = element_blank())
+        # removes background grid from plot
 ```
 
 ```{r hemo color anova}
