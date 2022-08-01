@@ -33,7 +33,19 @@ plot(hemo_ri ~ outcome, data=se_dat,
         col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
 
 # visualizes data looking at different conditions of gc against intermolt
-# data set; more internesting plots: look at just intermolt vs. molt
+```
+
+```{r Initial Hemo Protein in GC conditions without dead category}
+
+out_rmi <- factor(se_dat$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
+# sets parameters to compare removed, molted, and intermolt crabs
+
+plot(hemo_ri ~ out_rmi, data=se_dat,
+        main = 'Initial hemolymph protein concentration in green crabs',
+        subset = start_end == "start",
+        xlab = NULL, ylab = 'Protein Concentration',
+        col= c('steelblue4', 'plum', 'springgreen4'))
+
 ```
 
 ```{r sig testing Initial Hemo Protein in GC conditions}
