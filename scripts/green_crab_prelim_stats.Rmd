@@ -61,11 +61,12 @@ car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
 
 ```{r}
 
-boxplot( RI ~ Color, data = gc_dat,
+boxplot(RI ~ Color, data = gc_dat,
          main = "Hemolymph Protein vs. Color in Green Crabs", 
          xlab = "Hemolymph Color (on a scale of 1-5)", 
          ylab = "Protein Concentration", 
          col= c('white', 'aliceblue', 'bisque', 'coral', 'brown3'))
+
 
 # box plot comparing average RIs for different colored hemolymph
 # appears that there are some differences between hemo RI 
@@ -83,6 +84,7 @@ boxplot( Ca ~ Color, data = gc_dat,
 
 # appears that calcium increases as hemolymph color darkens
 ```
+
 
 ```{r interaction effects of RI and Ca on hemo color}
 
