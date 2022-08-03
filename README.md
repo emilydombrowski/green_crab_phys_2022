@@ -3,13 +3,25 @@
 Objective: Develop a molting identification assay to aid in pre-molt stage 
 identification in invasive green crabs
 
+Project repository for data collected about GC hemolymph physiology. This
+project was a study conducted over a 10 week period in 2022. The questions 
+this study sought to assess are:
+
+* How can biochemical parameters in hemolymph be used to predict molting?
+* Are hemolymph RI, color, and calcium levels related?
+
+The structure for this code base is R. All data can be found in the data 
+folder.
+
+
 Folders: 
-* data: contains .csv files with relevant data for project.  se.csv contains spreadsheet for evaluating
+* data: contains .csv files with relevant data for project. Raw data is stored
+  in .xslx files.
 * scripts: contains .Rmd files used to generate graphs and code
 * figs: contains .html output for project figures
 
+
 Data: 
-* Raw data is stored in .xslx files. 
 * Copy_Condo_dat_2022.xlsx is raw condo data used for this project including
   Wells Harbor and CML data. Other .csv folders were refined from this data
   sheet
@@ -25,15 +37,6 @@ Data:
   Harbor and CML
 * wl_molt_dat.csv contains raw  molt tracking data about Wells Harbor
 
-Project repository for data collected about GC hemolymph physiology. This
-project was a study conducted over a 10 week period in 2022. The questions 
-this study sought to assess are:
-
-* How can biochemical parameters in hemolymph be used to predict molting?
-* Are hemolymph RI, color, and calcium levels related?
-
-The structure for this code base is R. All data can be found in the data 
-folder.
 
 Files: 
 * Files are stored in the .csv format. 
@@ -41,9 +44,10 @@ Files:
   hemolymph color, protein refractive index, and calcium levels from Wells
   Reserve (WL) and Coastal Marine Lab (CML).
 
+
 Analysis: 
-* My results are in the form of box plots and linear models. Anovas, type III 
-  anovas, and Tukey HSD models were used to analyze this data.
+* My results are in the form of box plots and linear models. 
+* Anovas, type III anovas, and Tukey HSD models were used to analyze this data.
 
 Acknowledgements: 
 Special thanks to Emma Spies and Gordon Shannon for help with
