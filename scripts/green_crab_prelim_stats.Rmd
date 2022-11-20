@@ -12,7 +12,6 @@ library(gridExtra)
 library(scatterplot3d)
 library(MASS)
 
-
 ```
 
 ```{r RI vs. Calcium Plot base r}

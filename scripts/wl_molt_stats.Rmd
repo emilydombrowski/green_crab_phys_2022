@@ -7,8 +7,11 @@ molt_dat <- read.csv("../data/wl_molt_dat.csv")
 
 molt_dat_2 <- read.csv("../data/wl_cml_molt_dat.csv")
 # read in updated .csv
-# contains information from 2021, 2022, CML, and WL
+# contains information from 2021, 2022, CML, and WL until 08-2022
 
+molt_dat_upd <- read.csv("../data/crab_monitoring_cml_wel_11_10_22.csv")
+# read in updated .csv
+# contains information from 2021, 2022, CML and WL as of 11-2022
 
 library(dplyr)
 library(car)
@@ -37,7 +40,7 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 ```{r}
 # WL and CML 2021-2022
 
-plot(hemo_ri ~ days_from_molt, data = molt_dat_2,
+plot(hemo_ri ~ days_from_molt, data = molt_dat_upd,
      main = "Hemolymph RI as Green Crabs Approach Molt (n=36)",
      xlim = rev(range(days_from_molt)),
      xlab = "Days From Molt", 
