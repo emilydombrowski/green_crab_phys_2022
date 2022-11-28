@@ -3,7 +3,7 @@
 se_dat <- read.csv("../data/se.csv")
 # read in .csv
 
-se_dat_upd <- read.csv ("../data/se_updated.csv")
+se_dat_upd <- read.csv ("../data/molt_dat_cml_wel_11_10_22.csv")
 # updated .csv for 2021-2022 CML and WEL data
 
 se_dat$start_end <- factor(se_dat$start_end, levels = c('start', 'end'))
@@ -11,13 +11,13 @@ se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
                                                     'Molted', 'Intermolt'))
 # define levels as factors for later graphing
 
-se_dat_upd$hemo_ri <- as.double(se_dat_upd$hemo_ri)
+se_dat_upd$hemo_ri <- as.numeric(se_dat_upd$hemo_ri)
 
 se_dat_upd$start_end <- factor(se_dat_upd$start_end, 
                            levels = c('start', 'end'))
 
 se_dat_upd$outcome <- factor(se_dat_upd$outcome, 
-                         levels = c('Removed', 'Dead','Molted'))
+                         levels = c('Removed', 'Dead','Molted', 'Intermolt'))
 
 library(ggplot2)
 library(dplyr)
@@ -36,7 +36,6 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
 ```
 
 ```{r initial vs final hemo RI updated}
-
 boxplot(hemo_ri ~ start_end:outcome, data=se_dat_upd,
         main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
         Molted Crabs',
@@ -77,6 +76,19 @@ plot(hemo_ri ~ out_rmi, data=se_dat,
 
 ```
 
+```{r Initial Hemo Protein in GC conditions without dead category updated}
+
+out_rmi_upd <- factor(se_dat_upd$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
+# sets parameters to compare removed, molted, and intermolt crabs
+
+plot(hemo_ri ~ out_rmi_upd, data=se_dat_upd,
+        main = 'Initial hemolymph protein concentration in green crabs',
+        subset = start_end == "start",
+        xlab = NULL, ylab = 'Protein Concentration',
+        col= c('steelblue4', 'plum', 'springgreen4'))
+
+```
+
 ```{r sig testing Initial Hemo Protein in GC conditions}
 
 initial_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat, 
@@ -91,6 +103,20 @@ anova(initial_ri_mod)
 car::Anova(initial_ri_mod, type = 3)
 
 # outcome is significantly related to hemolymph RI
+```
+```{r sig testing Initial Hemo Protein in GC conditions}
+
+upd_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat_upd, 
+                     subset = start_end == "start")
+# builds model to evaluate hemo ri vs. crab outcome
+
+nobs(upd_ri_mod)
+
+plot(upd_ri_mod) # tests assumptions of normality
+summary(upd_ri_mod)
+anova(upd_ri_mod)
+car::Anova(upd_ri_mod, type = 3)
+
 ```
 
 ```{r}
