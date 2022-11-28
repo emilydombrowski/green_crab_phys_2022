@@ -9,9 +9,11 @@ molt_dat_2 <- read.csv("../data/wl_cml_molt_dat.csv")
 # read in updated .csv
 # contains information from 2021, 2022, CML, and WL until 08-2022
 
-molt_dat_upd <- read.csv("../data/crab_monitoring_cml_wel_11_10_22.csv")
+molt_dat_upd <- read.csv("../data/molt_dat_cml_wel_11_10_22.csv")
 # read in updated .csv
 # contains information from 2021, 2022, CML and WL as of 11-2022
+
+molt_dat_upd$hemo_ri <- as.numeric(molt_dat_upd$hemo_ri)
 
 library(dplyr)
 library(car)
@@ -41,10 +43,11 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 # WL and CML 2021-2022
 
 plot(hemo_ri ~ days_from_molt, data = molt_dat_upd,
-     main = "Hemolymph RI as Green Crabs Approach Molt (n=36)",
+     main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
      xlim = rev(range(days_from_molt)),
      xlab = "Days From Molt", 
-     ylab = "Hemolymph RI")
+     ylab = "Hemolymph RI",
+     type = "b")
 abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 
 ```
@@ -71,18 +74,18 @@ molt_dat %>%
 
 ```{r}
 
-# WL 2022 data
-molt_dat %>% 
+# WL CML 2021-2022 data
+molt_dat_upd %>% 
         # pipes molt data into ggplot
   ggplot(aes(x = days_from_molt, y = hemo_ri)) + 
         # populates plot with hemo ri info and defines color with crab ID
-    geom_point() + geom_smooth(method=lm, se=FALSE) + 
-        # specifies type of plot -- linear model without confidence int
+    geom_point() + geom_smooth(method=lm) + 
+        # specifies type of plot -- linear model with confidence int
         scale_x_reverse() + 
         # reverses x axis so information counts down to molt
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
-        ggtitle("Hemolymph RI as green crabs approach molt (n = 13)")
+        ggtitle("Hemolymph RI as green crabs approach molt (39 crabs)")
         # renames x and y labels and title
 
 
@@ -109,6 +112,35 @@ molt_dat %>%
         # renames x and y labels and title
         labs(col = "Crab ID") 
         # changes legend title
+```
+
+```{r hemo ri vs days from molt ggplot with gridded background}
+
+# CML WL 2021 2022 data
+
+library(ggplot2)
+library(dplyr)
+
+molt_dat_upd %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri, colour = crab_id)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_line() + 
+        # specifies type of plot - scatter linear plot with crab IDs
+        scale_x_reverse(limits = c(32, 0)) + 
+        # reverses x axis so information counts down to molt sets axis
+        xlab("Days from molt") + 
+        ylab ("Protein Concentration") +
+        ggtitle("Hemolymph protein as green crabs approach molt (n = 39)") +
+        # renames x and y labels and title
+        labs(col = "Crab ID") + 
+        # changes legend title
+        theme(legend.position = "none") +
+        # removes legend
+        theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(), 
+              panel.background = element_blank())
+      
 ```
 
 ```{r hemo ri vs days from molt ggplot without gridded background}
