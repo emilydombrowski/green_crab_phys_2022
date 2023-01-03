@@ -15,6 +15,11 @@ molt_dat_upd <- read.csv("../data/molt_dat_cml_wel_11_10_22.csv")
 
 molt_dat_upd$hemo_ri <- as.numeric(molt_dat_upd$hemo_ri)
 
+molt_dat_fin <- read.csv("../data/wl_cml_molt_dat_final.csv")
+
+molt_dat_fin$hemo_ri <- as.numeric(molt_dat_fin$hemo_ri)
+molt_dat_fin$days_from_molt <- as.numeric(molt_dat_fin$days_from_molt)
+
 library(dplyr)
 library(car)
 library(ggplot2)
@@ -45,6 +50,18 @@ abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
 plot(hemo_ri ~ days_from_molt, data = molt_dat_upd,
      main = "Hemolymph RI as Green Crabs Approach Molt (n=13)",
      xlim = rev(range(days_from_molt)),
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph RI",
+     type = "b")
+abline(lm (hemo_ri ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+```
+
+```{r}
+# most updated
+
+plot(hemo_ri ~ days_from_molt, data = molt_dat_fin,
+     main = "Hemolymph RI as Green Crabs Approach Molt",
      xlab = "Days From Molt", 
      ylab = "Hemolymph RI",
      type = "b")
@@ -86,6 +103,25 @@ molt_dat_upd %>%
         xlab("Days from molt") + 
         ylab ("Hemolymph RI") +
         ggtitle("Hemolymph RI as green crabs approach molt (39 crabs)")
+        # renames x and y labels and title
+
+
+```
+
+```{r}
+
+# upd data
+molt_dat_fin %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = days_from_molt, y = hemo_ri)) + 
+        # populates plot with hemo ri info and defines color with crab ID
+    geom_point() + geom_smooth(method=lm) + 
+        # specifies type of plot -- linear model with confidence int
+        scale_x_reverse() + 
+        # reverses x axis so information counts down to molt
+        xlab("Days from molt") + 
+        ylab ("Hemolymph RI") +
+        ggtitle("Hemolymph RI as green crabs approach molt (57 crabs)")
         # renames x and y labels and title
 
 
@@ -182,6 +218,20 @@ car::Anova(ri_mod, type = 3)
 
 # linear models for significance testing 
 # r square of 0.22 -- weak correlation
+
+```
+
+```{r ri days from molt anova}
+
+# WL CML 2022 data
+
+ri_mod_fin <- lm(hemo_ri ~ days_from_molt, data = molt_dat_fin)
+summary(ri_mod_fin)
+anova(ri_mod_fin)
+car::Anova(ri_mod_fin, type = 3)
+
+# linear models for significance testing 
+# r square of 0.04 -- no corellation
 
 ```
 
