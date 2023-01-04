@@ -19,6 +19,16 @@ se_dat_upd$start_end <- factor(se_dat_upd$start_end,
 se_dat_upd$outcome <- factor(se_dat_upd$outcome, 
                          levels = c('Removed', 'Dead','Molted', 'Intermolt'))
 
+se_dat_fin <- read.csv("../data/se_updated_final.csv")
+
+se_dat_fin$hemo_ri <- as.numeric(se_dat_fin$hemo_ri)
+
+se_dat_fin$start_end <- factor(se_dat_fin$start_end, 
+                           levels = c('start', 'end'))
+
+se_dat_fin$outcome <- factor(se_dat_fin$outcome, 
+                         levels = c('Removed', 'Dead','Molted', 'Intermolt'))
+
 library(ggplot2)
 library(dplyr)
 library(car)
@@ -43,6 +53,15 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat_upd,
         col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
                'springgreen4'))
 ```
+```{r initial vs final hemo RI in gc conditions cml update}
+boxplot(hemo_ri ~ start_end:outcome, data=se_dat_fin,
+        main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
+        Molted Crabs',
+        xlab = 'Condition', ylab = 'Hemolymph Protein',
+        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
+               'springgreen4'))
+
+```
 
 ```{r boxplot Initial Hemo Protein in GC conditions}
 plot(hemo_ri ~ outcome, data=se_dat,
@@ -56,6 +75,15 @@ plot(hemo_ri ~ outcome, data=se_dat,
 
 ```{r boxplot Initial Hemo Protein in GC conditions updated}
 plot(hemo_ri ~ outcome, data=se_dat_upd,
+        main = 'Initial Hemolymph Protein in Green Crabs',
+        subset = start_end == "start",
+        xlab = 'Condition', ylab = 'Hemolymph Protein',
+        col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
+
+```
+
+```{r boxplot Initial Hemo Protein in GC conditions updated jan}
+plot(hemo_ri ~ outcome, data=se_dat_fin,
         main = 'Initial Hemolymph Protein in Green Crabs',
         subset = start_end == "start",
         xlab = 'Condition', ylab = 'Hemolymph Protein',
@@ -82,6 +110,18 @@ out_rmi_upd <- factor(se_dat_upd$outcome, levels = c('Removed', 'Molted', 'Inter
 # sets parameters to compare removed, molted, and intermolt crabs
 
 plot(hemo_ri ~ out_rmi_upd, data=se_dat_upd,
+        main = 'Initial hemolymph protein concentration in green crabs',
+        subset = start_end == "start",
+        xlab = NULL, ylab = 'Protein Concentration',
+        col= c('steelblue4', 'plum', 'springgreen4'))
+
+```
+```{r Initial Hemo Protein in GC conditions without dead category updated}
+
+out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
+# sets parameters to compare removed, molted, and intermolt crabs
+
+plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
         main = 'Initial hemolymph protein concentration in green crabs',
         subset = start_end == "start",
         xlab = NULL, ylab = 'Protein Concentration',
@@ -116,6 +156,21 @@ plot(upd_ri_mod) # tests assumptions of normality
 summary(upd_ri_mod)
 anova(upd_ri_mod)
 car::Anova(upd_ri_mod, type = 3)
+
+```
+
+```{r sig testing Initial Hemo Protein in GC conditions}
+
+fin_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat_fin, 
+                     subset = start_end == "start")
+# builds model to evaluate hemo ri vs. crab outcome
+
+nobs(fin_ri_mod)
+
+plot(fin_ri_mod) # tests assumptions of normality
+summary(fin_ri_mod)
+anova(fin_ri_mod)
+car::Anova(fin_ri_mod, type = 3)
 
 ```
 
