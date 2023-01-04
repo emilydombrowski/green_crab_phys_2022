@@ -13,6 +13,19 @@ gc_dat_upd$Color <- as.factor(gc_dat_upd$Color)
 
 gc_dat_upd$RI <- as.numeric(gc_dat_upd$RI)
 
+# updated with full data set 2023-01-06
+
+gc_dat_fin <- read.csv("../data/Condo_Data_Raw_CML_WEL_1_6_23.csv")
+
+gc_dat_fin$hemo_col <- factor(gc_dat_fin$hemo_col,
+                           levels = c('1', '2', '3', '4', '5'))
+
+gc_dat_fin$hemo_col <- as.factor(gc_dat_fin$hemo_col)
+
+gc_dat_fin$hemo_ri <- as.numeric(gc_dat_fin$hemo_ri)
+
+# data reclassification to avoid errors later
+
 # libraries for data visualization
 library(ggplot2)
 library(dplyr)
@@ -89,7 +102,14 @@ boxplot(RI ~ Color, data = gc_dat_upd,
          ylab = "Protein Concentration", 
          col= c('white', 'aliceblue', 'bisque', 'coral', 'brown3'))
 ```
+```{r updated ri vs color graph}
+boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
+         main = "Hemolymph Protein vs. Color in Green Crabs", 
+         xlab = "Hemolymph Color (on a scale of 1-5)", 
+         ylab = "Protein Concentration", 
+         col= c('white', 'aliceblue', 'bisque', 'coral', 'brown3'))
 
+```
 
 ```{r Ca vs. color}
 
