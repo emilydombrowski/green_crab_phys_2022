@@ -267,6 +267,20 @@ boxplot(days_from_molt ~ hemo_color, data = molt_dat)
 # doesn't appear to be strong trend or correlation
 
 ```
+```{r hemo color and days to molt plot}
+
+# WL CML Final 2022 data
+
+plot(hemo_color ~ days_from_molt, data = molt_dat_fin,
+     main = "Hemolymph Color as Green Crabs Approach Molt (n=13)",
+     xlab = "Days From Molt", 
+     ylab = "Hemolymph Color")
+abline(lm (hemo_color ~ days_from_molt, data = molt_dat), col = 4, lwd = 3)
+
+
+boxplot(days_from_molt ~ hemo_color, data = molt_dat_fin)
+
+```
 
 ```{r hemo color vs days from molt ggplot with gridded background}
 
