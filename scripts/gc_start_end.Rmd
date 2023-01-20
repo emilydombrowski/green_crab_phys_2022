@@ -21,6 +21,9 @@ se_dat_upd$outcome <- factor(se_dat_upd$outcome,
 
 se_dat_fin <- read.csv("../data/se_updated_final.csv")
 
+as.numeric(se_dat_fin$outcome =="Molted")
+
+
 se_dat_fin$hemo_ri <- as.numeric(se_dat_fin$hemo_ri)
 
 se_dat_fin$start_end <- factor(se_dat_fin$start_end, 
@@ -200,8 +203,11 @@ plot(hemo_color ~ outcome, data=se_dat,
 ```{r glm for hemo color}
 
 as.factor(se_dat_fin$hemo_col)
+as.numeric(se_dat_fin$outcome == "Molted")
 
-col_out_mod <- glm(hemo_col ~ outcome, family = binomial, data = se_dat_fin)
+col_out_mod <- glm(outcome ~ hemo_col, family = binomial, data = se_dat_fin)
 
 col_out_mod
+
+plot(col_out_mod)
 ```
