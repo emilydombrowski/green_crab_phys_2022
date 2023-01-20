@@ -20,6 +20,8 @@ molt_dat_fin <- read.csv("../data/wl_cml_molt_dat_final.csv")
 molt_dat_fin$hemo_ri <- as.numeric(molt_dat_fin$hemo_ri)
 molt_dat_fin$days_from_molt <- as.numeric(molt_dat_fin$days_from_molt)
 
+pre_post_dat <- read.csv("../data/wl_cml_pre_post_ttest.csv")
+
 library(dplyr)
 library(car)
 library(ggplot2)
@@ -321,9 +323,17 @@ car::Anova(col_mod, type = 3)
 
 ```
 ```{r hemo RI before and after molt}
+
 boxplot(hemo_ri ~ pre_post, data = molt_dat_fin, 
         main = "Hemolymph Protein Before and After molt",
-        xlab = "Pre vs. Post Molt",
-        ylab = "Hemolymph Protein")
+        xlab = "Pre- vs. Post- Molt",
+        ylab = "Hemolymph Protein",
+        col= c('steelblue4', 'plum'))
+
+```
+
+```{r t test for pre vs post molt hemolymph}
+
+t.test(hemo_ri ~ pre_post, data = pre_post_dat, paired = TRUE, alternative = "two.sided")
 
 ```

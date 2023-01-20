@@ -196,3 +196,12 @@ plot(hemo_color ~ outcome, data=se_dat,
     col= c('steelblue4', 'plum', 'springgreen4'))
 
 ```
+
+```{r glm for hemo color}
+
+as.factor(se_dat_fin$hemo_col)
+
+col_out_mod <- glm(hemo_col ~ outcome, family = binomial, data = se_dat_fin)
+
+col_out_mod
+```
