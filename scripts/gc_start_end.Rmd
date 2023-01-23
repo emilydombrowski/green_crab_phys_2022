@@ -210,4 +210,6 @@ col_out_mod <- glm(outcome ~ hemo_col, family = binomial, data = se_dat_fin)
 col_out_mod
 
 plot(col_out_mod)
+
+anova(col_out_mod)
 ```
