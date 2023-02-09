@@ -213,3 +213,16 @@ plot(col_out_mod)
 
 anova(col_out_mod)
 ```
+
+```{r}
+
+library(lavaan)
+
+outmod <- "outcome ~ hemo_col + hemo_ri + condo_id + sex, 
+data = se_dat_fin"
+
+fitmod <- sem(outmod, data=se_dat_fin)
+
+summary(fitmod, fit.measures=TRUE, rsquare=TRUE)
+
+```

@@ -338,35 +338,3 @@ t.test(hemo_ri ~ pre_post, data = pre_post_dat, paired = TRUE, alternative = "tw
 
 ```
 
-```{r}
-
-library(vegan)
-library(dummies)
-
-comm = tapply(molt_dat_fin$hemo_ri,
-              INDEX = list(molt_dat_fin$condo_id, molt_dat_fin$crab_id),
-              mean)
-
-comm = ifelse(is.na(comm), 0, comm)
-
-cols_to_keep = c('hemo_color', 'hemo_ri', 'sex')
-env = aggregate(molt_dat_fin[ , cols_to_keep], 
-                by = list(molt_dat_fin$crab_id), function(x) x[1])
-
-all.equal(rownames(comm), rownames(env))
-
-rownames(comm) = 1:nrow(comm)
-rownames(env) = 1:nrow(env)
-
-crab_pca = rda(comm, scale=TRUE)
-crab_pca
-
-str(crab_pca)
-
-install.packages(devtools)
-library(devtools)
-install_github("vqv/ggbiplot")
-library(ggbiplot)
-
-plot(crab_pca, display = crab_id)
-```
