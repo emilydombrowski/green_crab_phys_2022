@@ -203,47 +203,60 @@ plot(hemo_color ~ outcome, data=se_dat,
 
 ```{r glm for hemo color}
 
+# glm with outcome as numeric looking specifically at hemo color
 as.factor(se_dat_fin$hemo_col)
 as.numeric(se_dat_fin$outcome == "Molted")
 
-col_out_mod <- glm(outcome ~ hemo_col, family = binomial, data = se_dat_fin)
+col_out_mod <- glm(outcome ~ hemo_col, family = binomial, 
+                   data = se_dat_fin)
 
 col_out_mod
-
 plot(col_out_mod)
 
-anova(col_out_mod)
-```
-
-```{r}
-out_mod <- lm(outcome ~ hemo_col + hemo_ri + sex + condo_id, 
-               data = se_dat_fin)
+# glm looking at more variables and interactionsa as a result of outcome
+# compared with other factors
+# glm with binomial dist. because outcome (molted vs. not molt) is bianry
+out_mod <- glm(outcome ~ hemo_col + hemo_ri + sex + condo_id + 
+                   hemo_col:hemo_ri, family = binomial, data = se_dat_fin)
 
 out_mod
-
 plot(out_mod)
 
-anova(out_mod)
+library(dplyr)
+library(MASS)
+
+step(out_mod)
+stepAIC(out_mod)
+
+# best aic is hemo_col:hemo_ri
 ```
 
 ```{r}
 
-library(lavaan)
+log_model = glm(outcome ~ hemo_ri, family = binomial, 
+                    data = se_dat_fin)
+plot(log_model)
 
-as.factor(se_dat_fin$hemo_col)
-as.numeric(se_dat_fin$outcome == "Molted")
-levels(se_dat_fin$outcome, c("Molted", ""))
+```
 
-outmod <- "outcome ~ hemo_col + hemo_ri + condo_id + sex"
 
-fit <- cfa(outmod, data = se_dat_fin)
-summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
+```{r looking to see if sem could work}
 
-fitmod <- sem(outmod, data=se_dat_fin)
+# library(lavaan)
 
-summary(fitmod, fit.measures=TRUE, rsquare=TRUE)
+# as.factor(se_dat_fin$hemo_col)
+# as.numeric(se_dat_fin$outcome == "Molted")
+# levels(se_dat_fin$outcome, c("Molted", ""))
+
+# outmod <- "outcome ~ hemo_col + hemo_ri + condo_id + sex"
+
+# fit <- cfa(outmod, data = se_dat_fin)
+# summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
+
+# fitmod <- sem(outmod, data=se_dat_fin)
+
+# summary(fitmod, fit.measures=TRUE, rsquare=TRUE)
 
 # Request summary of results
-summary(fitmod)
-
+# summary(fitmod)
 ```
