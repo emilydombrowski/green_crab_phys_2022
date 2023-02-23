@@ -13,8 +13,8 @@ se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
 
 se_dat_upd$hemo_ri <- as.numeric(se_dat_upd$hemo_ri)
 
-se_dat_upd$start_end <- factor(se_dat_upd$start_end, 
-                           levels = c('start', 'end'))
+# se_dat_upd$start_end <- factor(se_dat_upd$start_end, 
+                          # levels = c('start', 'end'))
 
 se_dat_upd$outcome <- factor(se_dat_upd$outcome, 
                          levels = c('Removed', 'Dead','Molted', 
@@ -24,14 +24,14 @@ se_dat_fin <- read.csv("../data/se_updated_final.csv")
 
 as.numeric(se_dat_fin$outcome =="Molted")
 
-
 se_dat_fin$hemo_ri <- as.numeric(se_dat_fin$hemo_ri)
 
 se_dat_fin$start_end <- factor(se_dat_fin$start_end, 
                            levels = c('start', 'end'))
 
 se_dat_fin$outcome <- factor(se_dat_fin$outcome, 
-                         levels = c('Removed', 'Dead','Molted', 'Intermolt'))
+                         levels = c('Removed', 'Dead','Molted',
+                                    'Intermolt'))
 
 library(ggplot2)
 library(dplyr)
@@ -232,10 +232,15 @@ stepAIC(out_mod)
 ```
 
 ```{r}
+as.numeric(se_dat_fin$period)
 
-log_model = glm(outcome ~ hemo_ri, family = binomial, 
-                    data = se_dat_fin)
+log_model = glm(period ~ hemo_ri + hemo_col + mass, 
+                subset = outcome == "Molted" & start_end == "start",
+                family = binomial, data = se_dat_fin)
+
 plot(log_model)
+summary(log_model)
+
 
 ```
 
