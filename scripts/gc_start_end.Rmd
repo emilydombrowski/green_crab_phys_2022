@@ -305,7 +305,7 @@ summary(out_mod2)
 ```{r}
 
 # subset of se_dat_fin looking specifically at factors we're interested in
-df_out <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
+df_out <- subset(se_dat_fin, start_end == "start" & sex == "M", na.rm = TRUE)
 
 # Data frame with hp in ascending order
 # use these values to establish parameters for predictions
@@ -330,7 +330,7 @@ ggplot(Pred_data, aes(x=cw, y=outcome)) + geom_point() +
                 method.args = list(family=binomial)) +
                     xlab("Carapace width (mm)") + 
                     ylab("Probability of molting as an outcome") +
-    ggtitle("Probability of Molting as an Outcome Based on Carapace Width")
+    ggtitle("Probability of Molting Based on Carapace Width (Male)")
 
 ```
 
