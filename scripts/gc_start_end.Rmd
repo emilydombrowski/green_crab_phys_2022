@@ -235,6 +235,7 @@ stepAIC(out_mod)
 
 # logistic model testing multiple factors and obtaining significance
 # compared to outcome
+
 log_model = glm(period ~ hemo_ri + cw + condo_id + sex, 
                 subset = outcome == "Molted" & start_end == "start",
                 family = binomial, data = se_dat_fin)
@@ -281,11 +282,55 @@ ggplot(Predicted_data, aes(x=hemo_ri, y=period)) + geom_point() +
 
 ```{r}
 
-out_mod = glm(outcome ~ hemo_ri + cw + condo_id + sex, 
-              start_end == "start", family = binomial, data = se_dat_fin)
+as.factor(se_dat_fin$outcome, levels = c('Removed','Dead','Molted',
+                                         'Intermolt'))
+                     
+out_mod = glm(outcome ~ hemo_ri + cw + hemo_col
+              +condo_id + sex,
+              subset = start_end == "start", 
+              family = binomial, data = se_dat_fin)
+
 plot(out_mod)
 summary(out_mod)
 
+out_mod2 = glm(outcome ~ cw,
+              subset = start_end == "start", 
+              family = binomial, data = se_dat_fin)
+summary(out_mod2)
+
+# CW impacts output
+# not time constrained
+```
+
+```{r}
+
+# subset of se_dat_fin looking specifically at factors we're interested in
+df_out <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
+
+# Data frame with hp in ascending order
+# use these values to establish parameters for predictions
+# generates 500 predictions for plot
+Pred_data <- data.frame(cw=seq(min(df_out$cw, na.rm = TRUE),
+                                      max(df_out$cw, na.rm = TRUE),
+                                      len=500))
+ 
+# Fill predicted values using regression model
+Pred_data$outcome = predict(out_mod2, Pred_data, type="response")
+ 
+# Plot Predicted data and original data points
+# plot in base r showing logistic regression
+plot(as.numeric(outcome == "Molted") ~ cw, data=df_out, 
+     xlab = "Carapace Width (mm)",
+     ylab = "Probability of Molting as an outcome")
+lines(outcome ~ cw, Pred_data, lwd=2, col="green")
+
+# Plot Predicted data and original data points
+ggplot(Pred_data, aes(x=cw, y=outcome)) + geom_point() +
+    stat_smooth(method="glm", color="blue", se=FALSE,
+                method.args = list(family=binomial)) +
+                    xlab("Carapace width (mm)") + 
+                    ylab("Probability of molting as an outcome") +
+    ggtitle("Probability of Molting as an Outcome Based on Carapace Width")
 
 ```
 
