@@ -232,6 +232,9 @@ stepAIC(out_mod)
 ```
 
 ```{r}
+
+# logistic model testing multiple factors and obtaining significance
+# compared to outcome
 log_model = glm(period ~ hemo_ri + cw + condo_id + sex, 
                 subset = outcome == "Molted" & start_end == "start",
                 family = binomial, data = se_dat_fin)
@@ -239,21 +242,21 @@ log_model = glm(period ~ hemo_ri + cw + condo_id + sex,
 plot(log_model)
 summary(log_model)
 
+# logistic model used for graphing
 log_mod = glm(period ~ hemo_ri, 
                 subset = outcome == "Molted" & start_end == "start",
                 family = binomial, data = se_dat_fin)
+summary(log_mod)
 ```
 
 ```{r glm predictions}
-
-# load library ggplot2
-library(ggplot2)
-
 # subset of se_dat_fin looking specifically at factors we're interested in
 df <- subset(se_dat_fin, outcome == "Molted" & start_end == "start", 
              na.rm = TRUE)
 
-#Data frame with hp in ascending order
+# Data frame with hp in ascending order
+# use these values to establish parameters for predictions
+# generates 500 predictions for plot
 Predicted_data <- data.frame(hemo_ri=seq(min(df$hemo_ri, na.rm = TRUE),
                                       max(df$hemo_ri, na.rm = TRUE),
                                       len=500))
@@ -262,6 +265,7 @@ Predicted_data <- data.frame(hemo_ri=seq(min(df$hemo_ri, na.rm = TRUE),
 Predicted_data$period = predict(log_mod, Predicted_data, type="response")
  
 # Plot Predicted data and original data points
+# plot in base r showing logistic regression
 plot(period ~ hemo_ri, data=df, xlab = "Hemolymph Protein",
      ylab = "Probability of Molting within 2 Weeks")
 lines(period ~ hemo_ri, Predicted_data, lwd=2, col="green")
@@ -273,6 +277,16 @@ ggplot(Predicted_data, aes(x=hemo_ri, y=period)) + geom_point() +
                     xlab("Hemolymph Protein") + 
                     ylab("Probability of molting within 2 weeks") +
     ggtitle("Probability of Molting Based on Hemolymph Protein")
+```
+
+```{r}
+
+out_mod = glm(outcome ~ hemo_ri + cw + condo_id + sex, 
+              start_end == "start", family = binomial, data = se_dat_fin)
+plot(out_mod)
+summary(out_mod)
+
+
 ```
 
 
