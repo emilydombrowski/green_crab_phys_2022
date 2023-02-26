@@ -77,47 +77,12 @@ plot(hemo_ri ~ outcome, data=se_dat,
 # visualizes data looking at different conditions of gc against intermolt
 ```
 
-```{r boxplot Initial Hemo Protein in GC conditions updated}
-plot(hemo_ri ~ outcome, data=se_dat_upd,
-        main = 'Initial Hemolymph Protein in Green Crabs',
-        subset = start_end == "start",
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
-
-```
-
 ```{r boxplot Initial Hemo Protein in GC conditions updated jan}
 plot(hemo_ri ~ outcome, data=se_dat_fin,
         main = 'Initial Hemolymph Protein in Green Crabs',
         subset = start_end == "start",
         xlab = 'Condition', ylab = 'Hemolymph Protein',
         col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
-
-```
-
-```{r Initial Hemo Protein in GC conditions without dead category}
-
-out_rmi <- factor(se_dat$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
-# sets parameters to compare removed, molted, and intermolt crabs
-
-plot(hemo_ri ~ out_rmi, data=se_dat,
-        main = 'Initial hemolymph protein concentration in green crabs',
-        subset = start_end == "start",
-        xlab = NULL, ylab = 'Protein Concentration',
-        col= c('steelblue4', 'plum', 'springgreen4'))
-
-```
-
-```{r Initial Hemo Protein in GC conditions without dead category updated}
-
-out_rmi_upd <- factor(se_dat_upd$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
-# sets parameters to compare removed, molted, and intermolt crabs
-
-plot(hemo_ri ~ out_rmi_upd, data=se_dat_upd,
-        main = 'Initial hemolymph protein concentration in green crabs',
-        subset = start_end == "start",
-        xlab = NULL, ylab = 'Protein Concentration',
-        col= c('steelblue4', 'plum', 'springgreen4'))
 
 ```
 ```{r Initial Hemo Protein in GC conditions without dead category updated}
@@ -130,36 +95,6 @@ plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
         subset = start_end == "start",
         xlab = NULL, ylab = 'Protein Concentration',
         col= c('steelblue4', 'plum', 'springgreen4'))
-
-```
-
-```{r sig testing Initial Hemo Protein in GC conditions}
-
-initial_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat, 
-                     subset = start_end == "start")
-# builds model to evaluate hemo ri vs. crab outcome
-
-nobs(initial_ri_mod)
-
-plot(initial_ri_mod) # tests assumptions of normality
-summary(initial_ri_mod)
-anova(initial_ri_mod)
-car::Anova(initial_ri_mod, type = 3)
-
-# outcome is significantly related to hemolymph RI
-```
-```{r sig testing Initial Hemo Protein in GC conditions}
-
-upd_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat_upd, 
-                     subset = start_end == "start")
-# builds model to evaluate hemo ri vs. crab outcome
-
-nobs(upd_ri_mod)
-
-plot(upd_ri_mod) # tests assumptions of normality
-summary(upd_ri_mod)
-anova(upd_ri_mod)
-car::Anova(upd_ri_mod, type = 3)
 
 ```
 
@@ -245,15 +180,14 @@ summary(log_model)
 
 # logistic model used for graphing
 log_mod = glm(period ~ hemo_ri, 
-                subset = outcome == "Molted" & start_end == "start",
+                subset = start_end == "start",
                 family = binomial, data = se_dat_fin)
 summary(log_mod)
 ```
 
-```{r glm predictions}
+```{r glm predictions period ri}
 # subset of se_dat_fin looking specifically at factors we're interested in
-df <- subset(se_dat_fin, outcome == "Molted" & start_end == "start", 
-             na.rm = TRUE)
+df <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
 
 # Data frame with hp in ascending order
 # use these values to establish parameters for predictions
@@ -285,10 +219,16 @@ ggplot(Predicted_data, aes(x=hemo_ri, y=period)) + geom_point() +
 as.factor(se_dat_fin$outcome, levels = c('Removed','Dead','Molted',
                                          'Intermolt'))
                      
-out_mod = glm(outcome ~ hemo_ri + cw + hemo_col
-              +condo_id + sex,
-              subset = start_end == "start", 
+out_mod_ri = glm(outcome ~ hemo_ri + cw + sex,
+              subset = start_end == "start" && condo_id == "WL", 
               family = binomial, data = se_dat_fin)
+summary(out_mod_ri)
+
+out_mod_col = glm(outcome ~ hemo_col + cw
+              + sex,
+              subset = start_end == "start" && condo_id == "WL", 
+              family = binomial, data = se_dat_fin)
+summary(out_mod_col)
 
 plot(out_mod)
 summary(out_mod)
@@ -297,6 +237,11 @@ out_mod2 = glm(outcome ~ cw,
               subset = start_end == "start", 
               family = binomial, data = se_dat_fin)
 summary(out_mod2)
+
+out_mod3 = glm(outcome ~ hemo_ri,
+              subset = start_end == "start", 
+              family = binomial, data = se_dat_fin)
+summary(out_mod3)
 
 # CW impacts output
 # not time constrained
@@ -331,6 +276,36 @@ ggplot(Pred_data, aes(x=cw, y=outcome)) + geom_point() +
                     xlab("Carapace width (mm)") + 
                     ylab("Probability of molting as an outcome") +
     ggtitle("Probability of Molting Based on Carapace Width (Male)")
+
+```
+
+```{r hemolyphm protein as a predicter for outcome}
+df_out <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
+
+# Data frame with hp in ascending order
+# use these values to establish parameters for predictions
+# generates 500 predictions for plot
+Pred_data3 <- data.frame(hemo_ri=seq(min(df_out$hemo_ri, na.rm = TRUE),
+                                      max(df_out$hemo_ri, na.rm = TRUE),
+                                      len=500))
+ 
+# Fill predicted values using regression model
+Pred_data3$outcome = predict(out_mod3, Pred_data3, type="response")
+ 
+# Plot Predicted data and original data points
+# plot in base r showing logistic regression
+plot(as.numeric(outcome == "Molted") ~ hemo_ri, data=df_out, 
+     xlab = "Hemolypmh Protein",
+     ylab = "Probability of Molting as an outcome")
+lines(outcome ~ hemo_ri, Pred_data3, lwd=2, col="green")
+
+# Plot Predicted data and original data points
+ggplot(Pred_data3, aes(x=hemo_ri, y=outcome)) + geom_point() +
+    stat_smooth(method="glm", color="blue", se=FALSE,
+                method.args = list(family=binomial)) +
+                    xlab("Hemolypmh Protein") + 
+                    ylab("Probability of molting as an outcome") +
+    ggtitle("Probability of Molting Based on Hemolymph RI")
 
 ```
 
