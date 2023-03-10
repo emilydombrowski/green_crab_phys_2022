@@ -81,6 +81,18 @@ boxplot(Ca ~ Color, data = gc_dat,
 # appears that calcium increases as hemolymph color darkens
 ```
 
+```{r}
+
+boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin, 
+      main = "Green Crab Hemolymph Protein vs. Color",
+      sub = 'Wells Condo',
+      xlab = "Hemolymph Color (on a scale of 1-5)",
+      ylab = "Hemolymph Protein",
+      col= c('white', 'antiquewhite3', 'bisque3', 'burlywood4',
+             'coral4'),
+      subset = condo_id == "WL")
+```
+
 
 ```{r interaction effects of RI and Ca on hemo color}
 
@@ -110,6 +122,18 @@ summary(ri_col_aov_fin)
 # tests between categories: is 1 dif. than 2, etc.
 
 TukeyHSD(ri_col_aov_fin, conf.level = 0.95) 
+```
+
+```{r}
+
+wl_col_aov_fin <- aov (hemo_ri ~ hemo_col, data=gc_dat_fin, 
+                       subset = condo_id == "WL")
+summary(wl_col_aov_fin)
+# type 1 aov used for Tukey test
+# tests between categories: is 1 dif. than 2, etc.
+
+TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
+
 ```
 
 ```{r Tukey HSD test for color and cai}

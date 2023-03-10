@@ -80,7 +80,7 @@ plot(hemo_ri ~ outcome, data=se_dat,
 ```{r boxplot Initial Hemo Protein in GC conditions updated jan}
 plot(hemo_ri ~ outcome, data=se_dat_fin,
         main = 'Initial Hemolymph Protein in Green Crabs',
-        subset = start_end == "start",
+        subset = start_end == "start" & condo_id == c("WL", "Lab"),
         xlab = 'Condition', ylab = 'Hemolymph Protein',
         col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
 
@@ -92,16 +92,21 @@ out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted', 'Inter
 
 plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
         main = 'Initial hemolymph protein concentration in green crabs',
-        subset = start_end == "start",
+        subset = start_end == "start" & condo_id == c("WL","Lab"),
         xlab = NULL, ylab = 'Protein Concentration',
         col= c('steelblue4', 'plum', 'springgreen4'))
 
 ```
 
+```{r}
+
+```
+
 ```{r sig testing Initial Hemo Protein in GC conditions}
 
-fin_ri_mod <- lm(hemo_ri ~ outcome, data=se_dat_fin, 
-                     subset = start_end == "start")
+fin_ri_mod <- lm(hemo_ri ~ out_rmi_fin, data=se_dat_fin, 
+                     subset = start_end == "start" & 
+                     condo_id == c("WL","Lab"))
 # builds model to evaluate hemo ri vs. crab outcome
 
 nobs(fin_ri_mod)
@@ -111,7 +116,9 @@ summary(fin_ri_mod)
 anova(fin_ri_mod)
 car::Anova(fin_ri_mod, type = 3)
 
-fin_ri_aov <- aov (hemo_ri ~ outcome, data=se_dat_fin)
+fin_ri_aov <- aov (hemo_ri ~ out_rmi_fin, data=se_dat_fin,
+                   subset = start_end == "start" & 
+                       condo_id == c("WL","Lab"))
 TukeyHSD(fin_ri_aov, conf.level = 0.95) 
 
 ```
@@ -309,24 +316,13 @@ ggplot(Pred_data3, aes(x=hemo_ri, y=outcome)) + geom_point() +
 
 ```
 
-
-```{r looking to see if sem could work}
-
-# library(lavaan)
-
-# as.factor(se_dat_fin$hemo_col)
-# as.numeric(se_dat_fin$outcome == "Molted")
-# levels(se_dat_fin$outcome, c("Molted", ""))
-
-# outmod <- "outcome ~ hemo_col + hemo_ri + condo_id + sex"
-
-# fit <- cfa(outmod, data = se_dat_fin)
-# summary(fit, fit.measures = TRUE, standardized=T,rsquare=T)
-
-# fitmod <- sem(outmod, data=se_dat_fin)
-
-# summary(fitmod, fit.measures=TRUE, rsquare=TRUE)
-
-# Request summary of results
-# summary(fitmod)
+```{r}
+boxplot(hemo_ri ~ hemo_col, data = se_dat_fin, 
+      main = "Initial Green Crab Hemolymph Protein vs. Color",
+      sub = 'Wells Condo',
+      xlab = "Hemolymph Color (on a scale of 1-5)",
+      ylab = "Hemolymph Protein",
+      col= c('white', 'antiquewhite3', 'bisque3', 'burlywood4',
+             'coral4'),
+      subset = condo_id == "WL" & start_end == "start")
 ```

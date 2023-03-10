@@ -1,280 +1,339 @@
-﻿Crab ID,Condo ID,Cell ID,Date Added,Date Removed,Days in Condo,Time Added (24hr),CW (mm),Weight (g),Sex (M/F),# Limbs Missing,Outcome,Notes/Observations,,,,,,,,,,,,
-BG,WL,A6,6/18/21,7/12/21,24,10:38,43.0,20.5,F,0,Dead,Dead 7/12/2021,,,,,,,,,,,,
-BGBG,WL,F1,6/10/21,7/1/21,21,11:55,56.0,50.5,M,0,Molted,,,,,,,,,,,,,
-BGBK,WL,D3,6/18/21,7/22/21,35,10:38,69.0,103.1,M,0,Removed,,,,,,,,,,,,,
-BGBR,WL,A4,6/3/21,6/17/21,14,10:10,61.0,70.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGBW,WL,C1,6/3/21,7/15/21,42,10:18,62.0,75.2,M,0,Dead,,,,,,,,,,,,,
-BGBY,WL,A3,6/18/21,7/22/21,35,10:38,63.0,78.4,M,0,Removed,,,,,,,,,,,,,
-BGG,WL,B2,6/3/21,6/21/21,18,10:16,42.0,20.3,M,0,Molted,,,,,,,,,,,,,
-BGGG,WL,F5,6/18/21,7/22/21,35,10:38,60.0,59.9,M,1,NA,Missing claw,,,,,,,,,,,,
-BGGK,WL,E4,6/10/21,7/8/21,42,11:55,43.0,21.2,M,3,Missing,,,,,,,,,,,,,
-BGGR,WL,C3,6/18/21,7/8/21,20,10:38,47.0,29.1,F,0,Removed,Had a brood on 7/8/21 so removed,,,,,,,,,,,,
-BGGW,WL,B3,6/3/21,7/15/21,42,10:17,54.0,42.8,M,2,Removed,2 legs on each side missing,,,,,,,,,,,,
-BGK,WS,C1,6/14/21,7/22/21,38,17:30,62.0,51.9,M,0,NA,,,,,,,,,,,,,
-BGKG,WL,C2,6/10/21,7/19/21,39,11:55,48.0,29.8,M,0,Molted,Molted 7/19/2021,,,,,,,,,,,,
-BGKK,WL,A3,6/3/21,6/17/21,14,10:10,57.0,47.5,M,2,Removed,"Claw & back leg missing, Removed from tray (non-premolt) on 6/17/2021 12:35  ",,,,,,,,,,,,
-BGKR,WL,A1,6/18/21,7/22/21,35,10:38,58.0,56.6,M,0,Removed,,,,,,,,,,,,,
-BGKW,WL,D2,6/18/21,6/24/21,6,10:38,53.0,39.4,M,1,Missing,"Bottom leg missing, went missing from condo?",,,,,,,,,,,,
-BGKY,WL,B1,6/3/21,6/14/21,11,10:17,51.0,36.8,M,0,Molted,Molted 6/14/2021,,,,,,,,,,,,
-BGR,WL,B5,6/3/21,6/17/21,14,10:18,57.0,60.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGRG,WL,D6,6/10/21,6/17/21,7,11:55,63.0,40.3,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGRK,WL,E2,6/10/21,6/17/21,7,11:55,57.0,51.0,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGRR,WL,F6,6/10/21,6/17/21,7,11:55,46.0,27.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGW,WL,C4,6/18/21,7/22/21,35,10:38,60.0,61.5,M,0,Removed,,,,,,,,,,,,,
-BGWG,WL,C4,6/10/21,6/17/21,7,11:55,61.0,60.6,M,0,Removed,"Super fiesty, Removed from tray (non-premolt) on 6/17/2021 12:35",,,,,,,,,,,,
-BGWK,WL,F3,6/10/21,6/17/21,7,11:55,55.0,43.2,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGWR,WL,D5,6/18/21,7/1/21,13,10:38,39.0,15.5,F,0,Dead,Dead 7/1/2021,,,,,,,,,,,,
-BGWW,WL,D2,6/10/21,6/17/21,7,11:55,57.0,48.5,M,1,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGWY,WL,D4,6/10/21,6/17/21,7,11:55,54.0,40.7,M,1,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGYG,WL,D4,6/18/21,7/22/21,35,10:38,55.0,49.7,M,0,Removed,Super aggressict & active,,,,,,,,,,,,
-BGYK,WL,D1,6/10/21,6/17/21,7,11:55,54.0,41.4,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGYR,WL,A2,6/3/21,7/15/21,42,10:10,64.0,80.8,M,0,Removed,,,,,,,,,,,,,
-BGYW,WL,E6,6/10/21,6/17/21,7,11:55,54.0,38.5,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-BGYY,WL,A5,6/3/21,6/17/21,14,10:11,62.0,68.0,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-GBB,WL,B4,6/13/22,7/14/22,14,NA,48.0,32.2,M,0,Molted,Retagged to KWB 7-5-22,,,,,,,,,,,,
-GBBB,WL,A2,6/13/22,6/21/22,9,NA,43.0,21.1,M,0,Missing,,,,,,,,,,,,,
-GBBW,WL,A3,6/13/22,6/28/22,16,NA,64.0,72.1,M,1,Dead,,,,,,,,,,,,,
-GBG,WL,F1,5/31/22,6/21/22,22,NA,52.0,40.3,M,0,Removed,Originally entered as GBY,,,,,,,,,,,,
-GBGB,WL,C3,5/19/22,5/31/22,13,NA,45.0,23.7,M,0,Molted,,,,,,,,,,,,,
-GBGG,WL,D1,5/19/22,6/13/22,26,NA,52.0,41.7,M,0,Molted,,,,,,,,,,,,,
-GBGK,WL,B2,6/13/22,7/11/22,29,NA,64.0,85.3,M,1,Removed,,,,,,,,,,,,,
-GBGR,WL,B1,5/19/22,6/13/22,26,NA,59.0,57.4,M,1,Removed,,,,,,,,,,,,,
-GBGW,WL,E4,5/19/22,6/6/22,19,NA,59.0,62.3,M,1,Dead,,,,,,,,,,,,,
-GBGY,WL,A3,5/19/22,5/23/22,5,NA,51.0,38.0,M,0,Molted,,,,,,,,,,,,,
-GBKR,WL,A1,5/19/22,6/6/22,19,NA,50.0,33.2,M,0,Molted,Died during molt (see photo),,,,,,,,,,,,
-GBRK,WL,A1,6/13/22,7/11/22,29,NA,65.0,77.2,M,0,Removed,,,,,,,,,,,,,
-GBRR,WL,B3,6/13/22,7/5/22,23,NA,61.0,65.0,M,1,Missing,Escaped condo following hemolymph draw,,,,,,,,,,,,
-GBRY,WL,E5,5/19/22,6/6/22,19,NA,52.0,41.6,M,0,Dead,,,,,,,,,,,,,
-GBWB,WL,B5,5/19/22,6/13/22,26,NA,58.0,51.6,M,0,Removed,,,,,,,,,,,,,
-GBWK,WL,D3,5/19/22,6/6/22,19,NA,57.0,54.6,M,0,Molted,,,,,,,,,,,,,
-GBWR,WL,B5,6/13/22,7/11/22,29,NA,44.0,23.9,M,0,Removed,,,,,,,,,,,,,
-GBWW,WL,C6,5/19/22,6/6/22,19,NA,50.0,36.5,M,0,Dead,Brought back to lab to film molting but died later that day,,,,,,,,,,,,
-GBWY,WL,D6,5/19/22,6/13/22,26,NA,57.0,51.6,M,0,Removed,Tag arm fell off; retagged as GYW on 6/8/2022,,,,,,,,,,,,
-GBY,WL,B3,5/19/22,6/13/22,26,NA,52.0,38.0,M,0,Removed,,,,,,,,,,,,,
-GBYB,WL,C1,5/19/22,5/31/22,13,NA,48.0,30.4,M,0,Molted,Died during molt (see photo),,,,,,,,,,,,
-GBYG,WL,A5,5/19/22,6/13/22,26,NA,48.0,34.3,M,0,Removed,,,,,,,,,,,,,
-GBYR,WL,B6,5/19/22,6/6/22,19,NA,59.0,50.4,M,1,Dead,,,,,,,,,,,,,
-GBYY,WL,E6,5/19/22,6/13/22,26,NA,57.0,56.4,M,0,Removed,,,,,,,,,,,,,
-GGBG,WL,C5,5/19/22,6/13/22,26,NA,51.0,37.4,M,0,Removed,,,,,,,,,,,,,
-GGBR,WL,D5,5/19/22,6/13/22,26,NA,55.0,48.1,M,0,Molted,"Molted, but body was missing following molt",,,,,,,,,,,,
-GGBW,WL,A6,5/19/22,6/13/22,26,NA,60.0,66.5,M,1,Removed,,,,,,,,,,,,,
-GGBY,WL,C2,5/19/22,5/31/22,13,NA,43.0,23.6,M,0,Molted,,,,,,,,,,,,,
-GGG,WL,A4,6/13/22,7/11/22,29,NA,56.0,47.5,M,0,Removed,,,,,,,,,,,,,
-GGGG,WL,E1,5/19/22,6/6/22,19,NA,48.0,28.5,M,0,Dead,,,,,,,,,,,,,
-GGGW,WL,F3,5/31/22,6/13/22,14,NA,49.0,35.7,M,0,Molted,Died during molt ,,,,,,,,,,,,
-GGGY,WL,C4,5/19/22,6/2/22,15,NA,50.0,37.8,M,0,Molted,,,,,,,,,,,,,
-GGKG,WL,E3,5/19/22,6/2/22,15,NA,51.0,37.5,M,0,Molted,,,,,,,,,,,,,
-GGKR,WL,B2,5/19/22,6/13/22,26,NA,51.0,41.1,M,0,Molted,,,,,,,,,,,,,
-GGRK,WL,B4,5/19/22,6/13/22,26,NA,53.0,42.4,M,0,Removed,,,,,,,,,,,,,
-GGRR,WL,A2,5/19/22,6/2/22,15,NA,46.0,28.5,M,0,Dead,,,,,,,,,,,,,
-GGW,WL,B1,6/13/22,6/21/22,28,NA,52.0,43.3,M,0,Molted,,,,,,,,,,,,,
-GGWG,WL,A6,6/13/22,6/21/22,9,NA,59.0,62.4,M,0,Dead,,,,,,,,,,,,,
-GGWK,WL,A5,6/13/22,7/14/22,31,NA,66.0,84.5,M,0,Removed,,,,,,,,,,,,,
-GGYG,WL,D2,5/19/22,6/13/22,26,NA,55.0,47.1,M,0,Removed,,,,,,,,,,,,,
-GGYR,WL,D4,5/19/22,6/13/22,26,NA,51.0,34.7,M,1,Removed,,,,,,,,,,,,,
-GGYW,WL,F2,5/31/22,6/21/22,22,NA,57.0,54.5,M,0,Removed,,,,,,,,,,,,,
-GYGK,WL,A4,5/19/22,6/13/22,26,NA,57.0,59.5,M,0,Removed,One leg broke during processing,,,,,,,,,,,,
-GYGW,WL,E2,5/19/22,6/13/22,26,NA,46.0,26.2,M,0,Removed,Retagged to GGKY on 5/6/2022,,,,,,,,,,,,
-KB,WL,B2,8/1/22,8/22/22,22,NA,47.0,30.9,F,1,Removed,,,,,,,,,,,,,
-KBBK,WL,B4,8/1/22,8/22/22,22,NA,55.0,43.1,F,1,Removed,,,,,,,,,,,,,
-KBBR,WL,C1,7/18/22,8/1/22,14,NA,52.0,42.1,F,0,Removed,,,,,,,,,,,,,
-KBBW,WL,A2,6/23/22,7/14/22,22,NA,64.0,77.1,M,1,Removed,,,,,,,,,,,,,
-KBBY,WL,B6,7/18/22,8/9/22,22,NA,50.0,38.0,F,0,Removed,,,,,,,,,,,,,
-KBG,WL,C1,8/1/22,8/22/22,22,NA,46.0,28.5,F,0,Removed,previously KBG,,,,,,,,,,,,
-KBGR,WL,B5,8/22/22,9/15/22,24,NA,51.0,36.5,F,0,Dead,,,,,,,,,,,,,
-KBKB,WL,A3,7/18/22,8/9/22,22,NA,59.0,51.9,F,0,Removed,developed eggs,,,,,,,,,,,,
-KBKR,WL,A3,8/22/22,9/6/22,15,NA,45.0,25.3,F,0,Dead,,,,,,,,,,,,,
-KBKY,WL,A1,8/1/22,8/22/22,22,NA,59.0,59.3,F,0,Removed,,,,,,,,,,,,,
-KBRR,WL,D3,8/1/22,8/22/22,22,NA,52.0,38.9,F,0,Removed,,,,,,,,,,,,,
-KBWK,WL,B1,7/18/22,7/21/22,3,NA,40.0,20.3,F,0,Removed,developed eggs,,,,,,,,,,,,
-KBWR,WL,B4,8/22/22,9/22/22,31,NA,52.0,40.5,F,0,Removed,,,,,,,,,,,,,
-KBWW,WL,B3,8/22/22,9/19/22,28,NA,52.0,39.5,F,0,Dead,,,,,,,,,,,,,
-KGBG,WL,A5,8/22/22,9/22/22,31,NA,56.0,45.7,F,1,Removed,,,,,,,,,,,,,
-KGG,WL,B2,8/22/22,9/19/22,28,NA,44.0,22.6,F,0,Dead,,,,,,,,,,,,,
-KGK,WL,A4,8/22/22,9/22/22,31,NA,50.0,33.5,F,0,Removed,,,,,,,,,,,,,
-KGKR,WL,A2,8/22/22,8/26/22,4,NA,53.0,40.3,F,0,Dead,,,,,,,,,,,,,
-KGRK,WL,D5,8/1/22,8/22/22,22,NA,44.0,24.5,F,0,Removed,,,,,,,,,,,,,
-KGWR,WL,A1,8/22/22,9/22/22,30,NA,48.0,30.5,F,0,Removed,,,,,,,,,,,,,
-KGWY,WL,A6,8/22/22,9/22/22,31,NA,50.0,33.1,F,0,Removed,,,,,,,,,,,,,
-KGYG,WL,B1,8/22/22,9/22/22,31,NA,46.0,27.2,F,0,Dead,died during molt,,,,,,,,,,,,
-KK,WL,F6,8/1/22,8/22/22,22,NA,45.0,29.0,F,0,Removed,,,,,,,,,,,,,
-KKBK,WL,D3,6/16/22,7/18/22,33,NA,55.0,49.2,M,0,Removed,,,,,,,,,,,,,
-KKGK,WL,D5,6/16/22,6/23/22,8,NA,59.0,60.5,M,0,Missing,,,,,,,,,,,,,
-KKK,WL,F4,8/1/22,8/22/22,22,NA,51.0,31.7,F,1.0,Removed,,,,,,,,,,,,,
-KKKK,WL,A2,7/18/22,8/9/22,22,NA,58.0,51.5,F,0,Removed,developed eggs,,,,,,,,,,,,
-KKWK,WL,E5,8/1/22,8/22/22,22,NA,41.0,19.9,F,1,Removed,,,,,,,,,,,,,
-KKYK,WL,D2,8/1/22,8/22/22,22,NA,51.0,34.1,F,1,Removed,,,,,,,,,,,,,
-KR,WL,A6,7/18/22,8/1/22,14,NA,46.0,29.3,F,0,Dead,,,,,,,,,,,,,
-KRBK,WL,E4,8/1/22,8/22/22,22,NA,45.0,25.0,F,0,Removed,,,,,,,,,,,,,
-KRBR,WL,D1,6/23/22,7/5/22,13,NA,54.0,45.2,M,0,Dead,,,,,,,,,,,,,
-KRBW,WL,B1,7/18/22,8/18/22,31,NA,50.0,33.1,F,0,Removed,,,,,,,,,,,,,
-KRGK,WL,C6,6/16/22,6/28/22,13,NA,56.0,49.0,M,0,Missing,,,,,,,,,,,,,
-KRGR,WL,A1,7/18/22,8/1/22,14,NA,49.0,29.7,F,0,Molted,,,,,,,,,,,,,
-KRGW,WL,B5,7/18/22,8/9/22,22,NA,50.0,34.7,F,1,Removed,,,,,,,,,,,,,
-KRK,WL,D6,8/1/22,8/22/22,22,NA,44.0,22.5,F,0,Removed,,,,,,,,,,,,,
-KRR,WL,B4,7/18/22,8/1/22,14,NA,45.0,29.4,F,0,Missing,,,,,,,,,,,,,
-KRRR,WL,F1,8/1/22,8/22/22,22,NA,39.0,16.9,F,0,Removed,,,,,,,,,,,,,
-KRW,WL,B3,8/1/22,8/22/22,22,NA,52.0,41.7,F,0,Removed,,,,,,,,,,,,,
-KRWK,WL,C3,6/16/22,6/30/22,15,NA,60.0,63.0,M,1,Missing,,,,,,,,,,,,,
-KRWR,WL,C5,6/16/22,6/28/22,13,NA,55.0,42.8,M,1,Missing,,,,,,,,,,,,,
-KRWW,WL,C2,6/16/22,7/11/22,26,NA,59.0,55.4,M,0,Removed,,,,,,,,,,,,,
-KRYR,WL,C1,6/16/22,7/11/22,26,NA,63.0,61.4,M,2,Removed,,,,,,,,,,,,,
-KRYW,WL,C6,8/1/22,8/22/22,22,NA,50.0,38.6,F,0,Removed,,,,,,,,,,,,,
-KWBK,WL,D4,8/1/22,8/22/22,22,NA,44.0,21.6,F,1,Removed,,,,,,,,,,,,,
-KWBW,WL,E2,8/1/22,8/1/22,0,NA,44.0,23.5,F,0,Missing,"crossed out on info sheet, no additional note",,,,,,,,,,,,
-KWGK,WL,B2,7/18/22,8/1/22,14,NA,56.0,45.8,F,1,Removed,developed eggs,,,,,,,,,,,,
-KWGW,WL,D1,8/1/22,8/18/22,17,NA,48.0,30.1,F,0,Missing,,,,,,,,,,,,,
-KWKK,WL,C5,7/29/22,8/22/22,24,NA,48.0,31.5,F,0,Removed,,,,,,,,,,,,,
-KWKW,WL,E5,8/1/22,8/22/22,22,NA,44.0,24.3,F,0,Removed,,,,,,,,,,,,,
-KWRK,WL,F3,8/1/22,8/22/22,22,NA,46.0,28.1,F,0.0,Removed,,,,,,,,,,,,,
-KWRW,WL,F2,8/1/22,8/22/22,22,NA,42.0,21.3,F,0,Removed,,,,,,,,,,,,,
-KWW,WL,C4,6/16/22,6/28/22,13,NA,59.0,64.8,M,1,Missing,,,,,,,,,,,,,
-KWWK,WL,D4,6/16/22,7/5/22,20,NA,51.0,49.1,M,0,Dead,,,,,,,,,,,,,
-KWWW,WL,A4,7/18/22,8/4/22,17,NA,49.0,32.3,F,0,Removed,developed eggs,,,,,,,,,,,,
-KWYK,WL,F5,8/1/22,8/22/22,22,NA,46.0,26.9,F,0,Dead,,,,,,,,,,,,,
-KWYW,WL,A5,7/18/22,8/9/22,22,NA,49.0,29.5,F,1,Removed,,,,,,,,,,,,,
-KYBW,WL,C3,7/29/22,8/9/22,11,NA,58.0,51.0,F,1,Removed,claw missing,,,,,,,,,,,,
-KYGR,WL,C4,7/29/22,8/15/22,17,NA,53.0,35.7,F,3,Dead,,,,,,,,,,,,,
-KYKR,WL,E1,8/1/22,8/22/22,22,NA,50.0,34.3,F,0,Removed,,,,,,,,,,,,,
-KYKW,WL,B6,6/16/22,6/28/22,13,NA,47.0,30.0,M,0,Missing,,,,,,,,,,,,,
-KYWK,WL,D1,6/16/22,6/28/22,13,NA,51.0,39.0,M,0,Missing,,,,,,,,,,,,,
-KYWR,WL,A6,8/1/22,8/22/22,22,NA,59.0,55.4,F,0,Removed,,,,,,,,,,,,,
-KYWW,WL,D2,6/16/22,7/11/22,26,NA,56.0,66.2,M,1,Removed,,,,,,,,,,,,,
-KYWY,WL,E3,8/1/22,8/3/22,2,NA,38.0,16.6,F,0,Dead,"shell loose, looked about to molt",,,,,,,,,,,,
-KYYR,WL,D6,6/16/22,6/23/22,8,NA,42.0,22.1,M,0,Missing,,,,,,,,,,,,,
-KYYW,WL,C2,7/18/22,8/9/22,22,NA,51.0,38.5,F,0,Removed,,,,,,,,,,,,,
-KYYY,WL,E1,6/16/22,7/11/22,26,NA,57.0,56.1,M,0,Removed,,,,,,,,,,,,,
-OB,CML,C4,6/25/21,7/23/21,29,11:39,58.0,50.6,M,4,Removed,"Removed 7/23/21 (In condo for 4 weeks); 1 claw, 3 legs",,,,,,,,,,,,
-OBB,WL,E3,6/10/21,6/28/21,18,11:55,49.0,33.2,M,0,Molted,,,,,,,,,,,,,
-OBBG,WL,F4,6/10/21,6/17/21,7,11:55,48.0,31.1,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBBR,CML,C2,6/25/21,6/29/21,5,11:28,44.0,22.2,M,1,Dead,Dead 6/29/21; 1 leg,,,,,,,,,,,,
-OBBW,WL,D5,6/10/21,6/17/21,7,11:55,63.0,74.9,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBBY,CML,A3,6/25/21,7/23/21,29,10:37,58.0,57.9,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks),,,,,,,,,,,,
-OBG,WL,E1,6/10/21,6/21/21,11,11:55,44.0,24.2,M,0,Molted,,,,,,,,,,,,,
-OBGB,CML,C6,6/25/21,7/20/21,26,11:48,58.0,54.2,M,1,Dead,Dead 7/20/21,,,,,,,,,,,,
-OBGG,CML,A1,6/25/21,7/23/21,29,10:25,53.0,48.3,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks),,,,,,,,,,,,
-OBGK,CML,A2,6/25/21,7/9/21,15,10:31,62.0,73.0,M,2,Dead,Dead 7/9/21,,,,,,,,,,,,
-OBGR,CML,C3,6/25/21,7/23/21,29,11:34,63.0,60.6,M,1,Dead,Dead 7/23/21; 1 leg,,,,,,,,,,,,
-OBGW,CML,C1,6/25/21,7/1/21,7,11:24,55.0,33.4,M,0,Dead,Dead 7/1/21,,,,,,,,,,,,
-OBGY,CML,B2,6/25/21,6/29/21,5,11:02,56.0,40.5,M,3.5,Dead,"Dead 6/29/21; missing part of claw, 4.3 leg",,,,,,,,,,,,
-OBK,WL,F5,6/10/21,6/17/21,7,11:55,62.0,66.4,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBKB,WL,C3,6/10/21,6/17/21,7,11:55,59.0,58.1,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBKG,WL,D3,6/10/21,6/17/21,7,11:55,60.0,57.7,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBKK,WL,F2,6/10/21,6/28/21,10,11:55,59.0,55.5,M,0,Missing,Went missing from condo?,,,,,,,,,,,,
-OBKW,CML,B4,6/25/21,7/1/21,7,11:11,46.0,32.4,M,1,Dead,Dead 7/1/21; 1 leg,,,,,,,,,,,,
-OBKY,CML,B3,6/25/21,7/15/21,21,11:08,52.0,33.6,M,1,Dead,Dead 7/15/21; jelly leg,,,,,,,,,,,,
-OBRG,CML,D2,6/25/21,7/23/21,29,11:50,45.0,29.3,M,1,Removed,Removed 7/23/21 (In condo for 4 weeks); intermolt or possibly very early pre-molt,,,,,,,,,,,,
-OBRK,CML,A6,6/25/21,7/23/21,29,10:53,60.0,63.2,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks),,,,,,,,,,,,
-OBRR,WL,B6,6/3/21,6/17/21,14,10:18,56.0,47.5,M,1,Removed,"1 claw missing, Removed from tray (non-premolt) on 6/17/2021 12:35",,,,,,,,,,,,
-OBRW,WL,D1,6/18/21,7/12/21,24,10:38,39.0,15.1,M,0,Molted,Molted 7/12/2021,,,,,,,,,,,,
-OBRY,CML,C5,6/25/21,7/23/21,29,11:43,58.0,64.8,M,0,Removed,"Removed 7/23/21 (In condo for 4 weeks); 1 leg, baby claw",,,,,,,,,,,,
-OBW,WL,C6,6/10/21,7/22/21,42,11:55,59.0,49.9,M,2,Dead,Dead 7/22/2021,,,,,,,,,,,,
-OBWB,WL,B4,6/3/21,6/17/21,14,10:17,55.0,48.8,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBWG,CML,B5,6/25/21,7/23/21,29,11:17,60.0,65.0,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks),,,,,,,,,,,,
-OBWK,WL,A1,6/3/21,6/17/21,14,10:09,56.0,50.3,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBWR,CML,B1,6/25/21,7/23/21,29,10:59,52.0,42.6,M,0,Dead,Dead 7/23/21,,,,,,,,,,,,
-OBWY,WL,E5,6/10/21,6/17/21,7,11:55,64.0,79.0,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBY,CML,A4,6/25/21,7/23/21,29,10:45,64.0,64.8,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks),,,,,,,,,,,,
-OBYB,CML,D1,6/25/21,7/13/21,19,11:50,44.0,28.7,M,0,Dead,"Dead 7/13/21; very good halo,dullish?",,,,,,,,,,,,
-OBYG,WL,A6,6/3/21,6/17/21,14,10:15,55.0,48.5,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35,,,,,,,,,,,,
-OBYK,WL,B6,6/18/21,7/22/21,35,10:38,62.0,72.9,M,1,Removed,Missing 1 leg,,,,,,,,,,,,
-OBYR,WL,C5,6/10/21,6/28/21,18,11:55,49.0,34.4,M,0,Molted,,,,,,,,,,,,,
-OBYW,CML,A5,6/25/21,7/5/21,11,10:49,51.0,38.8,M,0,Dead,Dead 7/5/21,,,,,,,,,,,,
-PB,WL,B2,7/22/21,9/10/21,51,11:10,45.0,23.5,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-PBBG,WL,F1,7/15/21,7/22/21,7,10:59,40.5,19.4,F,0,Molted,Molted 7/22/2021,,,,,,,,,,,,
-PBBK,WL,A2,7/22/21,9/10/21,51,11:10,53.0,42.0,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-PBBR,CML,B2,7/5/21,7/23/21,19,11:58,50.0,-,M,2,Removed,Removed 7/23/21 (in condo for 3 weeks),,,,,,,,,,,,
-PBBW,WL,F3,7/15/21,7/19/21,4,10:59,55.0,41.1,F,1,NA,1 leg,,,,,,,,,,,,
-PBBY,WL,D4,7/12/21,8/23/21,43,16:00,40.0,17.7,F,0,Removed,Removed 8/23/21 (in condo 6 weeks),,,,,,,,,,,,
-PBGG,WL,F2,7/15/21,9/10/21,51,10:59,49.0,31.1,F,2,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); 2 legs,,,,,,,,,,,,
-PBGK,CML,A5,7/5/21,7/23/21,19,11:56,67.5,18.4 (?),M,2,Removed,Removed 7/23/21 (in condo for 3 weeks),,,,,,,,,,,,
-PBGR,WL,A1,7/22/21,8/12/21,22,11:10,43.0,20.1,F,0,Missing,Escaped 8/12/21,,,,,,,,,,,,
-PBGW,WL,A5,6/24/21,7/22/21,29,11:30,62.0,70.2,M,0,Removed,,,,,,,,,,,,,
-PBGY,WL,E1,7/15/21,9/10/21,51,10:59,53.5,43.3,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-PBK,CML,B4,7/5/21,7/23/21,19,12:00,66.0,-,M,4,Removed,Removed 7/23/21 (in condo for 3 weeks),,,,,,,,,,,,
-PBR,WL,B1,7/22/21,8/16/21,26,11:10,58.0,45.1,F,3,Dead,Dead 8/16/21,,,,,,,,,,,,
-PBRB,WL,D6,7/19/21,9/10/21,51,11:46,49.0,31.0,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-PBRG,WL,D5,7/19/21,7/22/21,3,11:46,47.0,29.9,F,0,Molted,Molted 7/22/2021,,,,,,,,,,,,
-PBRG2,WL,A3,7/22/21,9/2/21,43,11:10,52.0,39.2,F,0,Dead,Dead 9/2/21; in condo 6 weeks,,,,,,,,,,,,
-PBRK,WL,B5,6/18/21,7/22/21,35,10:38,43.0,19.8,M,3,Removed,"1 claw, 2 legs missing",,,,,,,,,,,,
-PBRR,CML,B6,7/5/21,7/23/21,19,12:05,51.5,-,M,2,Removed,"Removed 7/23/21 (in condo for 3 weeks); 1 leg, 1 claw",,,,,,,,,,,,
-PBRY,CML,B6,6/25/21,7/1/21,7,11:21,52.0,47.6,M,0,Dead,Dead 7/1/21,,,,,,,,,,,,
-PBW,WL,D4,7/19/21,7/22/21,3,11:46,44.0,23.0,F,0,Molted,Molted 7/22/2021,,,,,,,,,,,,
-PBWB,WL,D2,7/19/21,9/10/21,51,11:46,58.0,59.9,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); 1 leg,,,,,,,,,,,,
-PBWG,WL,B1,6/18/21,7/22/21,35,10:38,51.0,38.4,M,0,Dead,Dead 7/22/2021,,,,,,,,,,,,
-PBWR,WL,B4,6/18/21,7/22/21,35,10:38,58.0,56.0,M,1,Removed,"Missing claw, very aggressive",,,,,,,,,,,,
-PBWW,WL,F6,7/15/21,8/26/21,43,10:59,55.0,46.9,F,1,Removed,Released 8/26/21 (in condo 6 weeks); 1 leg,,,,,,,,,,,,
-PBWY,WL,D1,7/19/21,8/16/21,29,11:46,56.0,49.4,F,0,Dead,Dead 8/16/21,,,,,,,,,,,,
-PBY,WL,A6,7/12/21,8/2/21,20,16:00,44.0,20.1,F,0,Dead,Dead 8/2/21,,,,,,,,,,,,
-PBYB,WL,D3,7/12/21,8/16/21,36,16:00,50.0,29.7,F,0,Dead,Dead 8/16/21,,,,,,,,,,,,
-PBYK,WL,A5,7/22/21,9/10/21,51,11:10,55.0,41.1,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-PBYR,WL,A4,7/22/21,7/26/21,4,11:10,45.0,23.3,F,0,Missing,MIA 7/26/2021,,,,,,,,,,,,
-PBYW,WL,E2,7/15/21,8/2/21,17,10:59,43.0,22.0,F,0,Molted,Molted 8/2/21,,,,,,,,,,,,
-PBYY,WL,D6,6/24/21,6/28/21,4,11:30,42.0,19.5,M,0,Molted,Molted 6/28/21,,,,,,,,,,,,
-PGG,WL,F4,7/15/21,8/26/21,43,10:59,54.5,41.8,F,0,Removed,Removed 8/26/21 (in condo 6 weeks),,,,,,,,,,,,
-PGR,WL,A4,6/18/21,7/22/21,35,10:38,61.5,65.6,M,0,Removed,aggressive,,,,,,,,,,,,
-UBBG,WL,E3,8/22/22,9/22/22,31,NA,49.0,34.0,F,0,Removed,,,,,,,,,,,,,
-UBBR,WL,D1,8/22/22,9/9/22,17,NA,47.0,25.5,F,1,Dead,,,,,,,,,,,,,
-UBGK,WL,E6,8/22/22,9/22/22,31,NA,59.0,53.3,F,1,Removed,,,,,,,,,,,,,
-UBGY,WL,C2,8/22/22,9/22/22,31,NA,52.0,35.7,F,1,Removed,,,,,,,,,,,,,
-UBKK,WL,F3,8/22/22,9/22/22,31,NA,45.0,25.2,F,0,Removed,,,,,,,,,,,,,
-UBRB,WL,C4,8/22/22,9/22/22,31,NA,56.0,45.6,F,0,Removed,,,,,,,,,,,,,
-UBW,WL,D5,8/22/22,9/19/22,28,NA,41.0,24.0,F,0,Dead,,,,,,,,,,,,,
-UBYB,WL,E2,8/1/22,8/22/22,22,NA,46.0,28.9,F,0,Removed,,,,,,,,,,,,,
-UBYG,WL,F1,8/22/22,9/19/22,28,NA,46.0,25.2,F,0,Dead,,,,,,,,,,,,,
-UBYK,WL,D3,8/22/22,9/19/22,28,NA,55.0,43.7,F,1,Dead,,,,,,,,,,,,,
-UBYW,WL,C5,8/22/22,9/22/22,31,NA,53.0,40.1,F,0,Removed,,,,,,,,,,,,,
-UGBY,WL,E1,8/22/22,9/22/22,31,NA,51.0,34.6,F,0,Missing,,,,,,,,,,,,,
-UGWG,WL,D4,8/22/22,9/22/22,31,NA,49.0,30.8,F,0,Dead,,,,,,,,,,,,,
-UGWW,WL,E4,8/22/22,9/22/22,31,NA,47.0,26.8,F,0,Removed,,,,,,,,,,,,,
-UGYK,WL,C1,8/22/22,9/6/22,15,NA,47.0,30.1,F,0,Molted,,,,,,,,,,,,,
-UGYR,WL,E5,8/22/22,8/26/22,4,NA,49.0,30.1,F,0,Molted,,,,,,,,,,,,,
-UGYY,WL,F2,8/22/22,9/22/22,31,NA,51.0,35.7,F,0,Removed,,,,,,,,,,,,,
-URBK,WL,D2,8/22/22,9/15/22,24,NA,44.0,22.1,F,0,Dead,previously UYBW,,,,,,,,,,,,
-UYBK,WL,C6,8/22/22,9/22/22,31,NA,49.0,30.1,F,0,Removed,,,,,,,,,,,,,
-UYGR,WL,C3,8/22/22,9/22/22,31,NA,51.0,34.0,F,0,Removed,,,,,,,,,,,,,
-UYK,WL,D6,8/22/22,9/19/22,28,NA,50.0,32.6,F,0,Dead,,,,,,,,,,,,,
-UYKR,WL,F5,8/22/22,9/22/22,31,NA,48.0,29.9,F,0,Removed,,,,,,,,,,,,,
-UYKY,WL,F6,8/22/22,9/22/22,31,NA,43.0,22.1,F,0,Removed,,,,,,,,,,,,,
-UYR,WL,B6,8/22/22,9/12/22,21,NA,58.0,46.5,F,2,Dead,,,,,,,,,,,,,
-UYRY,WL,E2,8/22/22,9/12/22,21,NA,48.0,25.9,F,2,Dead,previously UBKB,,,,,,,,,,,,
-UYW,WL,F4,8/22/22,9/22/22,31,NA,43.0,20.3,F,0,Removed,,,,,,,,,,,,,
-YB,CML,A3,8/6/21,9/7/21,33,13:07,51.0,30.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBBB,WL,D5,7/22/21,9/10/21,51,11:10,45.0,23.8,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBBG,WL,F1,7/22/21,9/10/21,51,11:10,58.0,56.5,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); new brood on 9/2/21,,,,,,,,,,,,
-YBBK,WL,C6,7/22/21,8/26/21,36,11:10,49.0,33.6,F,0,Dead,Dead 8/26/21,,,,,,,,,,,,
-YBBR,WL,F4,7/22/21,8/6/21,7,11:10,42.0,18.9,F,1,Dead,,,,,,,,,,,,,
-YBBY,CML,B1,8/6/21,9/7/21,33,13:07,45.0,26.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBG,WL,D3,7/22/21,8/12/21,22,11:10,51.0,36.6,F,0,Dead,Dead 8/12/21,,,,,,,,,,,,
-YBGR,CML,C6,8/6/21,8/19/21,14,13:07,46.0,23.7,F,0,Molted,Molted 8/19/21,,,,,,,,,,,,
-YBGW,CML,B5,8/6/21,8/19/21,14,13:07,47.5,29.9,F,0,Molted,Molted 8/19/21,,,,,,,,,,,,
-YBGY,CML,C1,8/6/21,9/7/21,33,13:07,46.0,24.7,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBK,WL,C5,7/22/21,7/29/21,7,11:10,40.0,15.1,F,1,Dead,Dead 7/29/2021,,,,,,,,,,,,
-YBKG,CML,B2,8/6/21,8/17/21,12,13:07,44.0,23.2,F,1,Dead,Dead 8/17/21,,,,,,,,,,,,
-YBKW,CML,B6,8/6/21,9/7/21,33,13:07,48.0,30.3,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBKY,WL,A3,7/22/21,9/10/21,51,11:10,52.0,34.0,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBR,CML,C4,8/6/21,9/7/21,33,13:07,48.0,29.6,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBRB,CML,C5,8/6/21,9/7/21,33,13:07,36.0,12.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YBRW,CML,A5,8/6/21,9/7/21,33,13:07,50.0,22.9,F,0,Dead,Dead 9/7/21,,,,,,,,,,,,
-YBRY,WL,B4,7/22/21,7/26/21,4,11:10,46.0,25.0,F,0,Dead,Dead 7/26/2021,,,,,,,,,,,,
-YBW,WL,E6,7/22/21,9/10/21,51,11:10,49.0,28.4,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBWG,WL,E3,7/22/21,9/10/21,51,11:10,47.0,24.6,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBWW,CML,C2,8/6/21,8/31/21,26,13:07,44.5,24.1,F,0,Dead,Dead 8/31/21,,,,,,,,,,,,
-YBWY,WL,A5,7/22/21,9/10/21,51,11:10,55.0,45.2,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBY,WL,E4,7/22/21,7/26/21,4,11:10,46.0,26.3,F,0,Molted,Molted 7/26/2021,,,,,,,,,,,,
-YBYB,WL,D4,7/22/21,8/12/21,22,11:10,50.0,32.7,F,0,Molted,Molted 8/12/21,,,,,,,,,,,,
-YBYK,WL,C1,7/22/21,9/10/21,51,11:10,47.0,26.8,F,2,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo),,,,,,,,,,,,
-YBYW,WL,F6,7/22/21,9/2/21,43,11:10,48.0,28.6,F,2,Dead,Dead 9/2/21; in condo 6 weeks,,,,,,,,,,,,
-YY,CML,D1,8/6/21,9/7/21,33,13:07,44.0,22.8,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YYG,WL,B3,7/22/21,7/26/21,4,11:10,43.0,20.6,F,0,Molted,Molted 7/26/2021,,,,,,,,,,,,
-YYGR,WL,C2,7/22/21,8/30/21,40,11:10,56.0,45.9,F,2,Dead,Dead 8/30/21,,,,,,,,,,,,
-YYGW,CML,C3,8/6/21,9/7/21,33,13:07,46.0,25.6,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YYGY,CML,A1,8/6/21,8/17/21,12,13:07,47.0,28.0,F,0,Molted,Molted 8/17/21,,,,,,,,,,,,
-YYK,CML,A2,8/6/21,8/10/21,5,13:07,45.5,26.8,F,0,Dead,Dead 8/10/21,,,,,,,,,,,,
-YYR,CML,A4,8/6/21,9/3/21,29,13:07,44.5,24.5,F,1,Molted,Molted 9/3/21,,,,,,,,,,,,
-YYW,WL,E5,7/22/21,8/19/21,29,11:10,55.0,41.6,F,1,Dead,Dead 8/19/21,,,,,,,,,,,,
-YYY,CML,A6,8/6/21,8/24/21,19,13:07,50.0,33.4,F,0,Molted,Molted 8/24/21,,,,,,,,,,,,
-YYYG,CML,B3,8/6/21,9/7/21,33,13:07,49.0,30.8,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-YYYK,CML,B4,8/6/21,8/27/21,22,13:07,47.0,28.8,F,0,Molted,Molted 8/27/21,,,,,,,,,,,,
-YYYW,CML,D2,8/6/21,9/7/21,33,13:07,48.0,31.9,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks),,,,,,,,,,,,
-,,,,,,,,".,",,,,,,,,,,,,,,,,
+﻿Crab ID,Condo ID,Cell ID,Date Added,Date Removed,Days in Condo,Time Added (24hr),CW (mm),Weight (g),Sex (M/F),# Limbs Missing,Outcome,Notes/Observations
+BG,WL,A6,6/18/21,7/12/21,24,10:38,43,20.5,F,0,Dead,Dead 7/12/2021
+BGBG,WL,F1,6/10/21,7/1/21,21,11:55,56,50.5,M,0,Molted,
+BGBK,WL,D3,6/18/21,7/22/21,35,10:38,69,103.1,M,0,Removed,
+BGBR,WL,A4,6/3/21,6/17/21,14,10:10,61,70.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGBW,WL,C1,6/3/21,7/15/21,42,10:18,62,75.2,M,0,Dead,
+BGBY,WL,A3,6/18/21,7/22/21,35,10:38,63,78.4,M,0,Removed,
+BGG,WL,B2,6/3/21,6/21/21,18,10:16,42,20.3,M,0,Molted,
+BGGG,WL,F5,6/18/21,7/22/21,35,10:38,60,59.9,M,1,NA,Missing claw
+BGGK,WL,E4,6/10/21,7/8/21,42,11:55,43,21.2,M,3,Missing,
+BGGR,WL,C3,6/18/21,7/8/21,20,10:38,47,29.1,F,0,Removed,Had a brood on 7/8/21 so removed
+BGGW,WL,B3,6/3/21,7/15/21,42,10:17,54,42.8,M,2,Removed,2 legs on each side missing
+BGK,WS,C1,6/14/21,7/22/21,38,17:30,62,51.9,M,0,NA,
+BGKG,WL,C2,6/10/21,7/19/21,39,11:55,48,29.8,M,0,Molted,Molted 7/19/2021
+BGKK,WL,A3,6/3/21,6/17/21,14,10:10,57,47.5,M,2,Removed,"Claw & back leg missing, Removed from tray (non-premolt) on 6/17/2021 12:35  "
+BGKR,WL,A1,6/18/21,7/22/21,35,10:38,58,56.6,M,0,Removed,
+BGKW,WL,D2,6/18/21,6/24/21,6,10:38,53,39.4,M,1,Missing,"Bottom leg missing, went missing from condo?"
+BGKY,WL,B1,6/3/21,6/14/21,11,10:17,51,36.8,M,0,Molted,Molted 6/14/2021
+BGR,WL,B5,6/3/21,6/17/21,14,10:18,57,60.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGRG,WL,D6,6/10/21,6/17/21,7,11:55,63,40.3,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGRK,WL,E2,6/10/21,6/17/21,7,11:55,57,51,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGRR,WL,F6,6/10/21,6/17/21,7,11:55,46,27.6,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGW,WL,C4,6/18/21,7/22/21,35,10:38,60,61.5,M,0,Removed,
+BGWG,WL,C4,6/10/21,6/17/21,7,11:55,61,60.6,M,0,Removed,"Super fiesty, Removed from tray (non-premolt) on 6/17/2021 12:35"
+BGWK,WL,F3,6/10/21,6/17/21,7,11:55,55,43.2,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGWR,WL,D5,6/18/21,7/1/21,13,10:38,39,15.5,F,0,Dead,Dead 7/1/2021
+BGWW,WL,D2,6/10/21,6/17/21,7,11:55,57,48.5,M,1,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGWY,WL,D4,6/10/21,6/17/21,7,11:55,54,40.7,M,1,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGYG,WL,D4,6/18/21,7/22/21,35,10:38,55,49.7,M,0,Removed,Super aggressict & active
+BGYK,WL,D1,6/10/21,6/17/21,7,11:55,54,41.4,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGYR,WL,A2,6/3/21,7/15/21,42,10:10,64,80.8,M,0,Removed,
+BGYW,WL,E6,6/10/21,6/17/21,7,11:55,54,38.5,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+BGYY,WL,A5,6/3/21,6/17/21,14,10:11,62,68,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+GBB,WL,B4,6/13/22,7/14/22,14,NA,48,32.2,M,0,Molted,Retagged to KWB 7-5-22
+GBBB,WL,A2,6/13/22,6/21/22,9,NA,43,21.1,M,0,Missing,
+GBBW,WL,A3,6/13/22,6/28/22,16,NA,64,72.1,M,1,Dead,
+GBG,WL,F1,5/31/22,6/21/22,22,NA,52,40.3,M,0,Removed,Originally entered as GBY
+GBGB,WL,C3,5/19/22,5/31/22,13,NA,45,23.7,M,0,Molted,
+GBGG,WL,D1,5/19/22,6/13/22,26,NA,52,41.7,M,0,Molted,
+GBGK,WL,B2,6/13/22,7/11/22,29,NA,64,85.3,M,1,Removed,
+GBGR,WL,B1,5/19/22,6/13/22,26,NA,59,57.4,M,1,Removed,
+GBGW,WL,E4,5/19/22,6/6/22,19,NA,59,62.3,M,1,Dead,
+GBGY,WL,A3,5/19/22,5/23/22,5,NA,51,38,M,0,Molted,
+GBKR,WL,A1,5/19/22,6/6/22,19,NA,50,33.2,M,0,Molted,Died during molt (see photo)
+GBRK,WL,A1,6/13/22,7/11/22,29,NA,65,77.2,M,0,Removed,
+GBRR,WL,B3,6/13/22,7/5/22,23,NA,61,65,M,1,Missing,Escaped condo following hemolymph draw
+GBRY,WL,E5,5/19/22,6/6/22,19,NA,52,41.6,M,0,Dead,
+GBWB,WL,B5,5/19/22,6/13/22,26,NA,58,51.6,M,0,Removed,
+GBWK,WL,D3,5/19/22,6/6/22,19,NA,57,54.6,M,0,Molted,
+GBWR,WL,B5,6/13/22,7/11/22,29,NA,44,23.9,M,0,Removed,
+GBWW,WL,C6,5/19/22,6/6/22,19,NA,50,36.5,M,0,Dead,Brought back to lab to film molting but died later that day
+GBWY,WL,D6,5/19/22,6/13/22,26,NA,57,51.6,M,0,Removed,Tag arm fell off; retagged as GYW on 6/8/2022
+GBY,WL,B3,5/19/22,6/13/22,26,NA,52,38,M,0,Removed,
+GBYB,WL,C1,5/19/22,5/31/22,13,NA,48,30.4,M,0,Molted,Died during molt (see photo)
+GBYG,WL,A5,5/19/22,6/13/22,26,NA,48,34.3,M,0,Removed,
+GBYR,WL,B6,5/19/22,6/6/22,19,NA,59,50.4,M,1,Dead,
+GBYY,WL,E6,5/19/22,6/13/22,26,NA,57,56.4,M,0,Removed,
+GGBG,WL,C5,5/19/22,6/13/22,26,NA,51,37.4,M,0,Removed,
+GGBR,WL,D5,5/19/22,6/13/22,26,NA,55,48.1,M,0,Molted,"Molted, but body was missing following molt"
+GGBW,WL,A6,5/19/22,6/13/22,26,NA,60,66.5,M,1,Removed,
+GGBY,WL,C2,5/19/22,5/31/22,13,NA,43,23.6,M,0,Molted,
+GGG,WL,A4,6/13/22,7/11/22,29,NA,56,47.5,M,0,Removed,
+GGGG,WL,E1,5/19/22,6/6/22,19,NA,48,28.5,M,0,Dead,
+GGGW,WL,F3,5/31/22,6/13/22,14,NA,49,35.7,M,0,Molted,Died during molt 
+GGGY,WL,C4,5/19/22,6/2/22,15,NA,50,37.8,M,0,Molted,
+GGKG,WL,E3,5/19/22,6/2/22,15,NA,51,37.5,M,0,Molted,
+GGKR,WL,B2,5/19/22,6/13/22,26,NA,51,41.1,M,0,Molted,
+GGRK,WL,B4,5/19/22,6/13/22,26,NA,53,42.4,M,0,Removed,
+GGRR,WL,A2,5/19/22,6/2/22,15,NA,46,28.5,M,0,Dead,
+GGW,WL,B1,6/13/22,6/21/22,28,NA,52,43.3,M,0,Molted,
+GGWG,WL,A6,6/13/22,6/21/22,9,NA,59,62.4,M,0,Dead,
+GGWK,WL,A5,6/13/22,7/14/22,31,NA,66,84.5,M,0,Removed,
+GGYG,WL,D2,5/19/22,6/13/22,26,NA,55,47.1,M,0,Removed,
+GGYR,WL,D4,5/19/22,6/13/22,26,NA,51,34.7,M,1,Removed,
+GGYW,WL,F2,5/31/22,6/21/22,22,NA,57,54.5,M,0,Removed,
+GYGK,WL,A4,5/19/22,6/13/22,26,NA,57,59.5,M,0,Removed,One leg broke during processing
+GYGW,WL,E2,5/19/22,6/13/22,26,NA,46,26.2,M,0,Removed,Retagged to GGKY on 5/6/2022
+KB,WL,B2,8/1/22,8/22/22,22,NA,47,30.9,F,1,Removed,
+KBBK,WL,B4,8/1/22,8/22/22,22,NA,55,43.1,F,1,Removed,
+KBBR,WL,C1,7/18/22,8/1/22,14,NA,52,42.1,F,0,Removed,
+KBBW,WL,A2,6/23/22,7/14/22,22,NA,64,77.1,M,1,Removed,
+KBBY,WL,B6,7/18/22,8/9/22,22,NA,50,38,F,0,Removed,
+KBG,WL,C1,8/1/22,8/22/22,22,NA,46,28.5,F,0,Removed,previously KBG
+KBGR,WL,B5,8/22/22,9/15/22,24,NA,51,36.5,F,0,Dead,
+KBKB,WL,A3,7/18/22,8/9/22,22,NA,59,51.9,F,0,Removed,developed eggs
+KBKR,WL,A3,8/22/22,9/6/22,15,NA,45,25.3,F,0,Dead,
+KBKY,WL,A1,8/1/22,8/22/22,22,NA,59,59.3,F,0,Removed,
+KBRR,WL,D3,8/1/22,8/22/22,22,NA,52,38.9,F,0,Removed,
+KBWK,WL,B1,7/18/22,7/21/22,3,NA,40,20.3,F,0,Removed,developed eggs
+KBWR,WL,B4,8/22/22,9/22/22,31,NA,52,40.5,F,0,Removed,
+KBWW,WL,B3,8/22/22,9/19/22,28,NA,52,39.5,F,0,Dead,
+KGBG,WL,A5,8/22/22,9/22/22,31,NA,56,45.7,F,1,Removed,
+KGG,WL,B2,8/22/22,9/19/22,28,NA,44,22.6,F,0,Dead,
+KGK,WL,A4,8/22/22,9/22/22,31,NA,50,33.5,F,0,Removed,
+KGKR,WL,A2,8/22/22,8/26/22,4,NA,53,40.3,F,0,Dead,
+KGRK,WL,D5,8/1/22,8/22/22,22,NA,44,24.5,F,0,Removed,
+KGWR,WL,A1,8/22/22,9/22/22,30,NA,48,30.5,F,0,Removed,
+KGWY,WL,A6,8/22/22,9/22/22,31,NA,50,33.1,F,0,Removed,
+KGYG,WL,B1,8/22/22,9/22/22,31,NA,46,27.2,F,0,Dead,died during molt
+KK,WL,F6,8/1/22,8/22/22,22,NA,45,29,F,0,Removed,
+KKBK,WL,D3,6/16/22,7/18/22,33,NA,55,49.2,M,0,Removed,
+KKGK,WL,D5,6/16/22,6/23/22,8,NA,59,60.5,M,0,Missing,
+KKK,WL,F4,8/1/22,8/22/22,22,NA,51,31.7,F,1,Removed,
+KKKK,WL,A2,7/18/22,8/9/22,22,NA,58,51.5,F,0,Removed,developed eggs
+KKWK,WL,E5,8/1/22,8/22/22,22,NA,41,19.9,F,1,Removed,
+KKYK,WL,D2,8/1/22,8/22/22,22,NA,51,34.1,F,1,Removed,
+KR,WL,A6,7/18/22,8/1/22,14,NA,46,29.3,F,0,Dead,
+KRBK,WL,E4,8/1/22,8/22/22,22,NA,45,25,F,0,Removed,
+KRBR,WL,D1,6/23/22,7/5/22,13,NA,54,45.2,M,0,Dead,
+KRBW,WL,B1,7/18/22,8/18/22,31,NA,50,33.1,F,0,Removed,
+KRGK,WL,C6,6/16/22,6/28/22,13,NA,56,49,M,0,Missing,
+KRGR,WL,A1,7/18/22,8/1/22,14,NA,49,29.7,F,0,Molted,
+KRGW,WL,B5,7/18/22,8/9/22,22,NA,50,34.7,F,1,Removed,
+KRK,WL,D6,8/1/22,8/22/22,22,NA,44,22.5,F,0,Removed,
+KRR,WL,B4,7/18/22,8/1/22,14,NA,45,29.4,F,0,Missing,
+KRRR,WL,F1,8/1/22,8/22/22,22,NA,39,16.9,F,0,Removed,
+KRW,WL,B3,8/1/22,8/22/22,22,NA,52,41.7,F,0,Removed,
+KRWK,WL,C3,6/16/22,6/30/22,15,NA,60,63,M,1,Missing,
+KRWR,WL,C5,6/16/22,6/28/22,13,NA,55,42.8,M,1,Missing,
+KRWW,WL,C2,6/16/22,7/11/22,26,NA,59,55.4,M,0,Removed,
+KRYR,WL,C1,6/16/22,7/11/22,26,NA,63,61.4,M,2,Removed,
+KRYW,WL,C6,8/1/22,8/22/22,22,NA,50,38.6,F,0,Removed,
+KWBK,WL,D4,8/1/22,8/22/22,22,NA,44,21.6,F,1,Removed,
+KWBW,WL,E2,8/1/22,8/1/22,0,NA,44,23.5,F,0,Missing,"crossed out on info sheet, no additional note"
+KWGK,WL,B2,7/18/22,8/1/22,14,NA,56,45.8,F,1,Removed,developed eggs
+KWGW,WL,D1,8/1/22,8/18/22,17,NA,48,30.1,F,0,Missing,
+KWKK,WL,C5,7/29/22,8/22/22,24,NA,48,31.5,F,0,Removed,
+KWKW,WL,E5,8/1/22,8/22/22,22,NA,44,24.3,F,0,Removed,
+KWRK,WL,F3,8/1/22,8/22/22,22,NA,46,28.1,F,0,Removed,
+KWRW,WL,F2,8/1/22,8/22/22,22,NA,42,21.3,F,0,Removed,
+KWW,WL,C4,6/16/22,6/28/22,13,NA,59,64.8,M,1,Missing,
+KWWK,WL,D4,6/16/22,7/5/22,20,NA,51,49.1,M,0,Dead,
+KWWW,WL,A4,7/18/22,8/4/22,17,NA,49,32.3,F,0,Removed,developed eggs
+KWYK,WL,F5,8/1/22,8/22/22,22,NA,46,26.9,F,0,Dead,
+KWYW,WL,A5,7/18/22,8/9/22,22,NA,49,29.5,F,1,Removed,
+KYBW,WL,C3,7/29/22,8/9/22,11,NA,58,51,F,1,Removed,claw missing
+KYGR,WL,C4,7/29/22,8/15/22,17,NA,53,35.7,F,3,Dead,
+KYKR,WL,E1,8/1/22,8/22/22,22,NA,50,34.3,F,0,Removed,
+KYKW,WL,B6,6/16/22,6/28/22,13,NA,47,30,M,0,Missing,
+KYWK,WL,D1,6/16/22,6/28/22,13,NA,51,39,M,0,Missing,
+KYWR,WL,A6,8/1/22,8/22/22,22,NA,59,55.4,F,0,Removed,
+KYWW,WL,D2,6/16/22,7/11/22,26,NA,56,66.2,M,1,Removed,
+KYWY,WL,E3,8/1/22,8/3/22,2,NA,38,16.6,F,0,Dead,"shell loose, looked about to molt"
+KYYR,WL,D6,6/16/22,6/23/22,8,NA,42,22.1,M,0,Missing,
+KYYW,WL,C2,7/18/22,8/9/22,22,NA,51,38.5,F,0,Removed,
+KYYY,WL,E1,6/16/22,7/11/22,26,NA,57,56.1,M,0,Removed,
+OB,CML,C4,6/25/21,7/23/21,29,11:39,58,50.6,M,4,Removed,"Removed 7/23/21 (In condo for 4 weeks); 1 claw, 3 legs"
+OBB,WL,E3,6/10/21,6/28/21,18,11:55,49,33.2,M,0,Molted,
+OBBG,WL,F4,6/10/21,6/17/21,7,11:55,48,31.1,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBBR,CML,C2,6/25/21,6/29/21,5,11:28,44,22.2,M,1,Dead,Dead 6/29/21; 1 leg
+OBBW,WL,D5,6/10/21,6/17/21,7,11:55,63,74.9,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBBY,CML,A3,6/25/21,7/23/21,29,10:37,58,57.9,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks)
+OBG,WL,E1,6/10/21,6/21/21,11,11:55,44,24.2,M,0,Molted,
+OBGB,CML,C6,6/25/21,7/20/21,26,11:48,58,54.2,M,1,Dead,Dead 7/20/21
+OBGG,CML,A1,6/25/21,7/23/21,29,10:25,53,48.3,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks)
+OBGK,CML,A2,6/25/21,7/9/21,15,10:31,62,73,M,2,Dead,Dead 7/9/21
+OBGR,CML,C3,6/25/21,7/23/21,29,11:34,63,60.6,M,1,Dead,Dead 7/23/21; 1 leg
+OBGW,CML,C1,6/25/21,7/1/21,7,11:24,55,33.4,M,0,Dead,Dead 7/1/21
+OBGY,CML,B2,6/25/21,6/29/21,5,11:02,56,40.5,M,3.5,Dead,"Dead 6/29/21; missing part of claw, 4.3 leg"
+OBK,WL,F5,6/10/21,6/17/21,7,11:55,62,66.4,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBKB,WL,C3,6/10/21,6/17/21,7,11:55,59,58.1,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBKG,WL,D3,6/10/21,6/17/21,7,11:55,60,57.7,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBKK,WL,F2,6/10/21,6/28/21,10,11:55,59,55.5,M,0,Missing,Went missing from condo?
+OBKW,CML,B4,6/25/21,7/1/21,7,11:11,46,32.4,M,1,Dead,Dead 7/1/21; 1 leg
+OBKY,CML,B3,6/25/21,7/15/21,21,11:08,52,33.6,M,1,Dead,Dead 7/15/21; jelly leg
+OBRG,CML,D2,6/25/21,7/23/21,29,11:50,45,29.3,M,1,Removed,Removed 7/23/21 (In condo for 4 weeks); intermolt or possibly very early pre-molt
+OBRK,CML,A6,6/25/21,7/23/21,29,10:53,60,63.2,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks)
+OBRR,WL,B6,6/3/21,6/17/21,14,10:18,56,47.5,M,1,Removed,"1 claw missing, Removed from tray (non-premolt) on 6/17/2021 12:35"
+OBRW,WL,D1,6/18/21,7/12/21,24,10:38,39,15.1,M,0,Molted,Molted 7/12/2021
+OBRY,CML,C5,6/25/21,7/23/21,29,11:43,58,64.8,M,0,Removed,"Removed 7/23/21 (In condo for 4 weeks); 1 leg, baby claw"
+OBW,WL,C6,6/10/21,7/22/21,42,11:55,59,49.9,M,2,Dead,Dead 7/22/2021
+OBWB,WL,B4,6/3/21,6/17/21,14,10:17,55,48.8,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBWG,CML,B5,6/25/21,7/23/21,29,11:17,60,65,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks)
+OBWK,WL,A1,6/3/21,6/17/21,14,10:09,56,50.3,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBWR,CML,B1,6/25/21,7/23/21,29,10:59,52,42.6,M,0,Dead,Dead 7/23/21
+OBWY,WL,E5,6/10/21,6/17/21,7,11:55,64,79,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBY,CML,A4,6/25/21,7/23/21,29,10:45,64,64.8,M,0,Removed,Removed 7/23/21 (in condo for 4 weeks)
+OBYB,CML,D1,6/25/21,7/13/21,19,11:50,44,28.7,M,0,Dead,"Dead 7/13/21; very good halo,dullish?"
+OBYG,WL,A6,6/3/21,6/17/21,14,10:15,55,48.5,M,0,Removed,Removed from tray (non-premolt) on 6/17/2021 12:35
+OBYK,WL,B6,6/18/21,7/22/21,35,10:38,62,72.9,M,1,Removed,Missing 1 leg
+OBYR,WL,C5,6/10/21,6/28/21,18,11:55,49,34.4,M,0,Molted,
+OBYW,CML,A5,6/25/21,7/5/21,11,10:49,51,38.8,M,0,Dead,Dead 7/5/21
+PB,WL,B2,7/22/21,9/10/21,51,11:10,45,23.5,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+PBBG,WL,F1,7/15/21,7/22/21,7,10:59,40.5,19.4,F,0,Molted,Molted 7/22/2021
+PBBK,WL,A2,7/22/21,9/10/21,51,11:10,53,42,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+PBBR,CML,B2,7/5/21,7/23/21,19,11:58,50,-,M,2,Removed,Removed 7/23/21 (in condo for 3 weeks)
+PBBW,WL,F3,7/15/21,7/19/21,4,10:59,55,41.1,F,1,NA,1 leg
+PBBY,WL,D4,7/12/21,8/23/21,43,16:00,40,17.7,F,0,Removed,Removed 8/23/21 (in condo 6 weeks)
+PBGG,WL,F2,7/15/21,9/10/21,51,10:59,49,31.1,F,2,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); 2 legs
+PBGK,CML,A5,7/5/21,7/23/21,19,11:56,67.5,18.4 (?),M,2,Removed,Removed 7/23/21 (in condo for 3 weeks)
+PBGR,WL,A1,7/22/21,8/12/21,22,11:10,43,20.1,F,0,Missing,Escaped 8/12/21
+PBGW,WL,A5,6/24/21,7/22/21,29,11:30,62,70.2,M,0,Removed,
+PBGY,WL,E1,7/15/21,9/10/21,51,10:59,53.5,43.3,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+PBK,CML,B4,7/5/21,7/23/21,19,12:00,66,-,M,4,Removed,Removed 7/23/21 (in condo for 3 weeks)
+PBR,WL,B1,7/22/21,8/16/21,26,11:10,58,45.1,F,3,Dead,Dead 8/16/21
+PBRB,WL,D6,7/19/21,9/10/21,51,11:46,49,31,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+PBRG,WL,D5,7/19/21,7/22/21,3,11:46,47,29.9,F,0,Molted,Molted 7/22/2021
+PBRG2,WL,A3,7/22/21,9/2/21,43,11:10,52,39.2,F,0,Dead,Dead 9/2/21; in condo 6 weeks
+PBRK,WL,B5,6/18/21,7/22/21,35,10:38,43,19.8,M,3,Removed,"1 claw, 2 legs missing"
+PBRR,CML,B6,7/5/21,7/23/21,19,12:05,51.5,-,M,2,Removed,"Removed 7/23/21 (in condo for 3 weeks); 1 leg, 1 claw"
+PBRY,CML,B6,6/25/21,7/1/21,7,11:21,52,47.6,M,0,Dead,Dead 7/1/21
+PBW,WL,D4,7/19/21,7/22/21,3,11:46,44,23,F,0,Molted,Molted 7/22/2021
+PBWB,WL,D2,7/19/21,9/10/21,51,11:46,58,59.9,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); 1 leg
+PBWG,WL,B1,6/18/21,7/22/21,35,10:38,51,38.4,M,0,Dead,Dead 7/22/2021
+PBWR,WL,B4,6/18/21,7/22/21,35,10:38,58,56,M,1,Removed,"Missing claw, very aggressive"
+PBWW,WL,F6,7/15/21,8/26/21,43,10:59,55,46.9,F,1,Removed,Released 8/26/21 (in condo 6 weeks); 1 leg
+PBWY,WL,D1,7/19/21,8/16/21,29,11:46,56,49.4,F,0,Dead,Dead 8/16/21
+PBY,WL,A6,7/12/21,8/2/21,20,16:00,44,20.1,F,0,Dead,Dead 8/2/21
+PBYB,WL,D3,7/12/21,8/16/21,36,16:00,50,29.7,F,0,Dead,Dead 8/16/21
+PBYK,WL,A5,7/22/21,9/10/21,51,11:10,55,41.1,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+PBYR,WL,A4,7/22/21,7/26/21,4,11:10,45,23.3,F,0,Missing,MIA 7/26/2021
+PBYW,WL,E2,7/15/21,8/2/21,17,10:59,43,22,F,0,Molted,Molted 8/2/21
+PBYY,WL,D6,6/24/21,6/28/21,4,11:30,42,19.5,M,0,Molted,Molted 6/28/21
+PGG,WL,F4,7/15/21,8/26/21,43,10:59,54.5,41.8,F,0,Removed,Removed 8/26/21 (in condo 6 weeks)
+PGR,WL,A4,6/18/21,7/22/21,35,10:38,61.5,65.6,M,0,Removed,aggressive
+UBBG,WL,E3,8/22/22,9/22/22,31,NA,49,34,F,0,Removed,
+UBBR,WL,D1,8/22/22,9/9/22,17,NA,47,25.5,F,1,Dead,
+UBGK,WL,E6,8/22/22,9/22/22,31,NA,59,53.3,F,1,Removed,
+UBGY,WL,C2,8/22/22,9/22/22,31,NA,52,35.7,F,1,Removed,
+UBKK,WL,F3,8/22/22,9/22/22,31,NA,45,25.2,F,0,Removed,
+UBRB,WL,C4,8/22/22,9/22/22,31,NA,56,45.6,F,0,Removed,
+UBW,WL,D5,8/22/22,9/19/22,28,NA,41,24,F,0,Dead,
+UBYB,WL,E2,8/1/22,8/22/22,22,NA,46,28.9,F,0,Removed,
+UBYG,WL,F1,8/22/22,9/19/22,28,NA,46,25.2,F,0,Dead,
+UBYK,WL,D3,8/22/22,9/19/22,28,NA,55,43.7,F,1,Dead,
+UBYW,WL,C5,8/22/22,9/22/22,31,NA,53,40.1,F,0,Removed,
+UGBY,WL,E1,8/22/22,9/22/22,31,NA,51,34.6,F,0,Missing,
+UGWG,WL,D4,8/22/22,9/22/22,31,NA,49,30.8,F,0,Dead,
+UGWW,WL,E4,8/22/22,9/22/22,31,NA,47,26.8,F,0,Removed,
+UGYK,WL,C1,8/22/22,9/6/22,15,NA,47,30.1,F,0,Molted,
+UGYR,WL,E5,8/22/22,8/26/22,4,NA,49,30.1,F,0,Molted,
+UGYY,WL,F2,8/22/22,9/22/22,31,NA,51,35.7,F,0,Removed,
+URBK,WL,D2,8/22/22,9/15/22,24,NA,44,22.1,F,0,Dead,previously UYBW
+UYBK,WL,C6,8/22/22,9/22/22,31,NA,49,30.1,F,0,Removed,
+UYGR,WL,C3,8/22/22,9/22/22,31,NA,51,34,F,0,Removed,
+UYK,WL,D6,8/22/22,9/19/22,28,NA,50,32.6,F,0,Dead,
+UYKR,WL,F5,8/22/22,9/22/22,31,NA,48,29.9,F,0,Removed,
+UYKY,WL,F6,8/22/22,9/22/22,31,NA,43,22.1,F,0,Removed,
+UYR,WL,B6,8/22/22,9/12/22,21,NA,58,46.5,F,2,Dead,
+UYRY,WL,E2,8/22/22,9/12/22,21,NA,48,25.9,F,2,Dead,previously UBKB
+UYW,WL,F4,8/22/22,9/22/22,31,NA,43,20.3,F,0,Removed,
+YB,CML,A3,8/6/21,9/7/21,33,13:07,51,30.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBBB,WL,D5,7/22/21,9/10/21,51,11:10,45,23.8,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBBG,WL,F1,7/22/21,9/10/21,51,11:10,58,56.5,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo); new brood on 9/2/21
+YBBK,WL,C6,7/22/21,8/26/21,36,11:10,49,33.6,F,0,Dead,Dead 8/26/21
+YBBR,WL,F4,7/22/21,8/6/21,7,11:10,42,18.9,F,1,Dead,
+YBBY,CML,B1,8/6/21,9/7/21,33,13:07,45,26.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBG,WL,D3,7/22/21,8/12/21,22,11:10,51,36.6,F,0,Dead,Dead 8/12/21
+YBGR,CML,C6,8/6/21,8/19/21,14,13:07,46,23.7,F,0,Molted,Molted 8/19/21
+YBGW,CML,B5,8/6/21,8/19/21,14,13:07,47.5,29.9,F,0,Molted,Molted 8/19/21
+YBGY,CML,C1,8/6/21,9/7/21,33,13:07,46,24.7,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBK,WL,C5,7/22/21,7/29/21,7,11:10,40,15.1,F,1,Dead,Dead 7/29/2021
+YBKG,CML,B2,8/6/21,8/17/21,12,13:07,44,23.2,F,1,Dead,Dead 8/17/21
+YBKW,CML,B6,8/6/21,9/7/21,33,13:07,48,30.3,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBKY,WL,A3,7/22/21,9/10/21,51,11:10,52,34,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBR,CML,C4,8/6/21,9/7/21,33,13:07,48,29.6,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBRB,CML,C5,8/6/21,9/7/21,33,13:07,36,12.5,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YBRW,CML,A5,8/6/21,9/7/21,33,13:07,50,22.9,F,0,Dead,Dead 9/7/21
+YBRY,WL,B4,7/22/21,7/26/21,4,11:10,46,25,F,0,Dead,Dead 7/26/2021
+YBW,WL,E6,7/22/21,9/10/21,51,11:10,49,28.4,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBWG,WL,E3,7/22/21,9/10/21,51,11:10,47,24.6,F,1,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBWW,CML,C2,8/6/21,8/31/21,26,13:07,44.5,24.1,F,0,Dead,Dead 8/31/21
+YBWY,WL,A5,7/22/21,9/10/21,51,11:10,55,45.2,F,0,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBY,WL,E4,7/22/21,7/26/21,4,11:10,46,26.3,F,0,Molted,Molted 7/26/2021
+YBYB,WL,D4,7/22/21,8/12/21,22,11:10,50,32.7,F,0,Molted,Molted 8/12/21
+YBYK,WL,C1,7/22/21,9/10/21,51,11:10,47,26.8,F,2,Removed,removed 9/10/21 but last monitored 9/2/21 (> 6 weeks in condo)
+YBYW,WL,F6,7/22/21,9/2/21,43,11:10,48,28.6,F,2,Dead,Dead 9/2/21; in condo 6 weeks
+YY,CML,D1,8/6/21,9/7/21,33,13:07,44,22.8,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YYG,WL,B3,7/22/21,7/26/21,4,11:10,43,20.6,F,0,Molted,Molted 7/26/2021
+YYGR,WL,C2,7/22/21,8/30/21,40,11:10,56,45.9,F,2,Dead,Dead 8/30/21
+YYGW,CML,C3,8/6/21,9/7/21,33,13:07,46,25.6,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YYGY,CML,A1,8/6/21,8/17/21,12,13:07,47,28,F,0,Molted,Molted 8/17/21
+YYK,CML,A2,8/6/21,8/10/21,5,13:07,45.5,26.8,F,0,Dead,Dead 8/10/21
+YYR,CML,A4,8/6/21,9/3/21,29,13:07,44.5,24.5,F,1,Molted,Molted 9/3/21
+YYW,WL,E5,7/22/21,8/19/21,29,11:10,55,41.6,F,1,Dead,Dead 8/19/21
+YYY,CML,A6,8/6/21,8/24/21,19,13:07,50,33.4,F,0,Molted,Molted 8/24/21
+YYYG,CML,B3,8/6/21,9/7/21,33,13:07,49,30.8,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+YYYK,CML,B4,8/6/21,8/27/21,22,13:07,47,28.8,F,0,Molted,Molted 8/27/21
+YYYW,CML,D2,8/6/21,9/7/21,33,13:07,48,31.9,F,0,Removed,Removed 9/7/21 (in condo for 5 weeks)
+K-BBG,CML,A3,6/11/23,6/30/23,19,8:00,60,45.5,M,0,condo restock-removed,black zip tie
+K-BGY,CML,A2,6/11/23,6/17/23,6,8:00,54,39.3,M,0,molt,
+K-BYG,CML,A5,6/11/23,6/15/23,4,8:00,39,15.72,M,0,molt,
+K-BYK,CML,B4,6/11/23,6/20/23,9,8:00,53,41,M,0,dead,
+K-BYY,CML,B2,6/11/23,6/30/23,19,8:00,60,56,M,1,condo restock-removed,
+K-GBR,CML,A4,6/11/23,6/27/23,16,8:00,46,24.3,M,0,dead,
+K-GBW,CML,A1,6/11/23,6/30/23,19,8:00,60,65.3,M,0,condo restock-removed,
+R-BB,CML,E4,6/8/23,6/11/23,3,11:30,37,N/A,M,0,dead,
+R-BBG,CML,C6,5/17/23,6/11/23,25,9:00,49,29.8,M,1,end of 21 days-removed,"pre-molt, good halo"
+R-BBK,CML,C4,5/17/23,6/11/23,25,9:00,46,24.61,M,0,end of 21 days-removed,"pre-molt, good halo"
+R-BBW,CML,B4,6/8/23,6/11/23,3,11:30,40,N/A,M,0,dead,disappeared from spreadsheet 6/11
+R-BBY —> R-BY,CML,C2,5/17/23,6/11/23,25,9:00,59,47.03,M,0,end of 21 days-removed,very early per-molt
+R-BG,CML,F3,5/17/23,6/20/23,34,9:00,43,20.56,M,0,dead,"early pre-molt, faint halo; moved to F4 6/11/22; originally entered as R-BG!"
+R-BGG,CML,C1,6/15/23,6/27/23,12,12:30,58,46,M,0,molt,red zip tie
+R-BRG,CML,B5,6/15/23,6/22/23,7,12:30,65,73,M,0,molt,no claws on molted crab
+R-BRW,CML,C3,5/17/23,6/11/23,25,9:00,50,30.42,M,0,end of 21 days-removed,"pre-molt, good halo"
+R-BW,CML,C1,5/17/23,6/11/23,25,9:00,52,35.85,M,0,end of 21 days-removed,super early pre-molt
+R-BWG,CML,F2,6/15/23,6/30/23,15,12:30,73,90,M,0,condo restock-removed,mean
+R-BYR,CML,A6,6/8/23,6/29/23,21,11:30,54,32,M,0,dead,
+R-BYW,CML,C5,5/17/23,6/11/23,25,9:00,57,43.47,M,1,end of 21 days-removed,early pre-molt
+R-GG,CML,D1,5/17/23,5/30/23,13,9:00,52,39.95,M,0,molt,"pre-molt, good halo"
+R-GGK,CML,D5,5/17/23,6/11/23,25,9:00,42,23.54,M,0,end of 21 days-removed,very early per-molt
+R-GGY,CML,D3,5/17/23,5/25/23,8,9:00,44,21.22,M,0,dead,"pre-molt, good halo"
+R-GKG,CML,D2,5/17/23,6/8/23,22,9:00,44,21.58,M,1,dead,early pre-molt
+R-GR,CML,C6,6/15/23,6/30/23,15,12:30,69,72,M,0,condo restock-removed,
+R-GW,CML,D4,5/17/23,6/4/23,18,9:00,57,44.79,M,0,dead,very early per-molt
+R-GY,CML,C3,6/15/23,6/30/23,15,12:30,66,67,M,0,condo restock-removed,
+R-K,CML,D6,5/17/23,6/11/23,25,9:00,47,26.95,M,0,dead,very early per-molt
+R-KBK,CML,B2,5/17/23,6/11/23,25,9:00,48,26.87,M,0,end of 21 days-removed,"early pre-molt, faint halo"
+R-KGK,CML,B3,5/17/23,5/27/23,10,9:00,48,21.25,M,0,dead,"early pre-molt, faint halo"
+R-KK,CML,B6,5/17/23,6/11/23,25,9:00,47,24.09,M,0,molt,early pre-molt
+R-KKK,CML,F4,5/17/23,6/11/23,25,9:00,46,21.46,M,0,molt,early pre-molt
+R-KRK,CML,B4,5/17/23,6/6/23,20,9:00,50,30.98,M,0,dead,"early pre-molt, faint halo"
+R-KWK,CML,B5,5/17/23,6/11/23,25,9:00,54,42.71,M,0,end of 21 days-removed,"early pre-molt, faint halo"
+R-KYK,CML,B1,5/17/23,6/4/23,18,9:00,45,26.02,M,0,dead,"early pre-molt, faint halo"
+R-R,CML,E3,5/17/23,6/8/23,22,9:00,54,39.46,M,0,dead,very early per-molt
+R-RBR,CML,E5,5/17/23,5/27/23,10,9:00,44,21.37,M,0,dead,early pre-molt
+R-RBW,CML,D2,6/8/23,6/30/23,12,11:30,51,N/A,M,0,condo restock-removed,
+R-RGR,CML,E6,5/17/23,6/11/23,25,9:00,56,41.7,M,0,end of 21 days-removed,pre-molt
+R-RGW,CML,E5,6/8/23,6/27/23,19,11:30,44,N/A,M,1,molt,
+R-RK,CML,D3,5/25/23,6/11/23,16,9:15,59,N/A,M,1,dead,"early pre-molt, faint halo"
+R-RRK,CML,E2,5/17/23,6/1/23,15,9:00,51,35.47,M,0,molt,very early per-molt
+R-RRR,CML,E4,5/17/23,6/4/23,18,9:00,42,19.36,M,0,dead,very early per-molt
+R-RW,CML,E1,5/17/23,6/11/23,25,9:00,51,45.25,M,0,molt,"pre-molt, good halo"
+R-RWR,CML,D1,6/8/23,6/20/23,12,11:30,40,21,M,0,molt,"old legs and body missing, claw looked pulled off"
+R-RWW,CML,F6,5/17/23,5/25/23,8,9:00,46,24.01,M,1,dead,early pre-molt
+R-RYR,CML,F1,5/17/23,6/4/23,18,9:00,44,19.81,M,1,molt,pre-molt
+R-RYW,CML,F2,5/17/23,6/4/23,18,9:00,43,27.03,M,0,molt,"pre-molt, good halo"
+R-W,CML,A2,5/17/23,6/11/23,25,9:00,49,26.6,M,0,end of 21 days-removed,"early, visible halo"
+R-WBW,CML,E2,6/8/23,6/30/23,22,11:30,43,N/A,M,1,condo restock-removed,
+R-WGK,CML,A3,5/17/23,6/11/23,25,9:00,50,31.35,M,0,end of 21 days-removed,barely visible halo
+R-WGW,CML,D4,6/8/23,6/30/23,22,11:30,50,N/A,M,0,condo restock-removed,
+R-WKK,CML,F5,5/17/23,6/11/23,25,9:00,45,22.77,M,0,dead,"pre-molt, good halo"
+R-WKW,CML,A6,5/17/23,5/27/23,10,9:00,49,32.06,M,0,dead,
+R-WRK,CML,B3,6/8/23,6/27/23,19,11:30,42,20,M,0,dead,
+R-WRW,CML,A1,5/17/23,6/4/23,18,9:00,55,41.86,M,0,molt ,"early, visible halo-red zip tie"
+R-WWK,CML,B1,6/8/23,6/30/23,22,11:30,44,19.8,M,0,condo restock-removed,
+R-WWW,CML,F6,5/25/23,6/24/23,29,9:15,45,N/A,M,0,dead,"pre-molt, good halo"
+R-WYK,CML,A4,5/17/23,6/11/23,25,9:00,45,24.99,M,0,molt ,"early, visible halo"
+R-WYW —> R-WW,CML,A5,5/17/23,6/11/23,25,9:00,57,34.7,M,0,molt ,"early, visible halo; Y tag fell off at some point"
