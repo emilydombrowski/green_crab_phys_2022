@@ -178,8 +178,9 @@ stepAIC(out_mod)
 # logistic model testing multiple factors and obtaining significance
 # compared to outcome
 
-log_model = glm(period ~ hemo_ri + cw + condo_id + sex, 
-                subset = outcome == "Molted" & start_end == "start",
+log_model = glm(period ~ hemo_ri + cw + sex, 
+                subset = outcome == "Molted" & start_end == "start" 
+                & condo_id == "WL",
                 family = binomial, data = se_dat_fin)
 
 plot(log_model)
@@ -187,14 +188,15 @@ summary(log_model)
 
 # logistic model used for graphing
 log_mod = glm(period ~ hemo_ri, 
-                subset = start_end == "start",
+                subset = start_end == "start" & condo_id == "WL",
                 family = binomial, data = se_dat_fin)
 summary(log_mod)
 ```
 
 ```{r glm predictions period ri}
 # subset of se_dat_fin looking specifically at factors we're interested in
-df <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
+df <- subset(se_dat_fin, start_end == "start" & condo_id == "WL",
+             na.rm = TRUE)
 
 # Data frame with hp in ascending order
 # use these values to establish parameters for predictions
@@ -227,12 +229,11 @@ as.factor(se_dat_fin$outcome, levels = c('Removed','Dead','Molted',
                                          'Intermolt'))
                      
 out_mod_ri = glm(outcome ~ hemo_ri + cw + sex,
-              subset = start_end == "start" && condo_id == "WL", 
+              subset = start_end == "start" & condo_id == "WL", 
               family = binomial, data = se_dat_fin)
 summary(out_mod_ri)
 
-out_mod_col = glm(outcome ~ hemo_col + cw
-              + sex,
+out_mod_col = glm(outcome ~ hemo_col + cw+ sex,
               subset = start_end == "start" && condo_id == "WL", 
               family = binomial, data = se_dat_fin)
 summary(out_mod_col)
@@ -241,7 +242,7 @@ plot(out_mod)
 summary(out_mod)
 
 out_mod2 = glm(outcome ~ cw,
-              subset = start_end == "start", 
+              subset = start_end == "start" & condo_id == "WL", 
               family = binomial, data = se_dat_fin)
 summary(out_mod2)
 
@@ -257,7 +258,8 @@ summary(out_mod3)
 ```{r}
 
 # subset of se_dat_fin looking specifically at factors we're interested in
-df_out <- subset(se_dat_fin, start_end == "start" & sex == "M", na.rm = TRUE)
+df_out <- subset(se_dat_fin, start_end == "start" & sex == "M" & 
+                     condo_id == 'WL', na.rm = TRUE)
 
 # Data frame with hp in ascending order
 # use these values to establish parameters for predictions
@@ -273,7 +275,9 @@ Pred_data$outcome = predict(out_mod2, Pred_data, type="response")
 # plot in base r showing logistic regression
 plot(as.numeric(outcome == "Molted") ~ cw, data=df_out, 
      xlab = "Carapace Width (mm)",
-     ylab = "Probability of Molting as an outcome")
+     ylab = "Probability of Molting as an outcome",
+     main = "Probability of Molting Based on Carapace Width (Male)",
+     sub = "Wells Condo")
 lines(outcome ~ cw, Pred_data, lwd=2, col="green")
 
 # Plot Predicted data and original data points
@@ -282,12 +286,15 @@ ggplot(Pred_data, aes(x=cw, y=outcome)) + geom_point() +
                 method.args = list(family=binomial)) +
                     xlab("Carapace width (mm)") + 
                     ylab("Probability of molting as an outcome") +
-    ggtitle("Probability of Molting Based on Carapace Width (Male)")
+    ggtitle(
+        label = "Probability of Molting Based on Carapace Width (Male)",
+        subtitle = "Wells Condo")
 
 ```
 
 ```{r hemolyphm protein as a predicter for outcome}
-df_out <- subset(se_dat_fin, start_end == "start", na.rm = TRUE)
+df_out <- subset(se_dat_fin, start_end == "start" & 
+                     condo_id == "WL", na.rm = TRUE)
 
 # Data frame with hp in ascending order
 # use these values to establish parameters for predictions
@@ -312,7 +319,8 @@ ggplot(Pred_data3, aes(x=hemo_ri, y=outcome)) + geom_point() +
                 method.args = list(family=binomial)) +
                     xlab("Hemolypmh Protein") + 
                     ylab("Probability of molting as an outcome") +
-    ggtitle("Probability of Molting Based on Hemolymph RI")
+    ggtitle(label = "Probability of Molting Based on Hemolymph RI",
+            subtitle = "Wells Condo")
 
 ```
 
