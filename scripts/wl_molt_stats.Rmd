@@ -87,14 +87,15 @@ boxplot(hemo_ri ~ pre_post, data = molt_dat_fin,
         xlab = "Pre- vs. Post- Molt",
         ylab = "Hemolymph Refractive Index",
         col= c('steelblue4', 'plum'),
-        subset = condo_id == "WL")
+        subset = condo_id == "WL" & period == "TRUE")
 
 ```
 
 ```{r t test for pre vs post molt hemolymph}
 
 t.test(hemo_ri ~ pre_post, data = pre_post_dat, paired = TRUE, 
-       alternative = "two.sided", subset = condo_id == "WL")
+       alternative = "two.sided", 
+       subset = condo_id == "WL" & period == "TRUE")
 
 ```
 

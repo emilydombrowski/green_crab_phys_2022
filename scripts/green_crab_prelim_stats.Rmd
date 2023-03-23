@@ -70,11 +70,10 @@ car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
 
 ```{r Ca vs. color}
 
-boxplot(Ca ~ Color, data = gc_dat, 
-      main = "Green Crab Hemolymph Calcium (ppm) vs. Color",
+boxplot(Ca ~ Color, data = gc_dat,
       xlab = "Hemolymph Color (on a scale of 1-5)",
       ylab = "Calcium (ppm)",
-      col= c('white', 'aliceblue', 'bisque', 'coral'))
+      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'))
 
 # appears that calcium increases as hemolymph color darkens
 ```

@@ -79,7 +79,6 @@ plot(hemo_ri ~ outcome, data=se_dat,
 
 ```{r boxplot Initial Hemo Protein in GC conditions updated jan}
 plot(hemo_ri ~ outcome, data=se_dat_fin,
-        main = 'Initial Hemolymph Protein in Green Crabs',
         subset = start_end == "start" & condo_id == c("WL", "Lab"),
         xlab = 'Condition', ylab = 'Hemolymph Protein',
         col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
@@ -91,9 +90,8 @@ out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted', 'Inter
 # sets parameters to compare removed, molted, and intermolt crabs
 
 plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
-        main = 'Initial hemolymph protein concentration in green crabs',
         subset = start_end == "start" & condo_id == c("WL","Lab"),
-        xlab = NULL, ylab = 'Protein Concentration',
+        xlab = NULL, ylab = 'Protein Refractive Index',
         col= c('steelblue4', 'plum', 'springgreen4'))
 
 ```
@@ -185,14 +183,14 @@ summary(log_model)
 
 # logistic model used for graphing
 log_mod = glm(period ~ hemo_ri, 
-                subset = start_end == "start" & condo_id == "WL",
+                subset = start_end == "start" & condo_id == "WL", 
                 family = binomial, data = se_dat_fin)
 summary(log_mod)
 ```
 
 ```{r glm predictions period ri}
 # subset of se_dat_fin looking specifically at factors we're interested in
-df <- subset(se_dat_fin, start_end == "start" & condo_id == "WL",
+df <- subset(se_dat_fin, start_end == "start" & condo_id == "WL" & period == "TRUE",
              na.rm = TRUE)
 
 # Data frame with hp in ascending order
@@ -214,10 +212,8 @@ lines(period ~ hemo_ri, Predicted_data, lwd=2, col="green")
 # Plot Predicted data and original data points
 ggplot(Predicted_data, aes(x=hemo_ri, y=period)) + geom_point() +
     stat_smooth(method="glm", color="blue", se=FALSE,
-                method.args = list(family=binomial)) +
-                    xlab("Hemolymph Protein") + 
-                    ylab("Probability of molting within 2 weeks") +
-    ggtitle("Probability of Molting Based on Hemolymph Protein")
+                method.args = list(family=binomial)) + 
+  labs(x="Hemolymph Refractive Index", y="Probability of Molting")
 ```
 
 ```{r}
