@@ -83,11 +83,9 @@ boxplot(days_from_molt ~ hemo_color, data = molt_dat_fin)
 molt_dat_fin$pre_post <- factor(molt_dat_fin$pre_post, 
                                 levels = c('pre', 'post'))
 
-boxplot(hemo_ri ~ pre_post, data = molt_dat_fin, 
-        main = "Hemolymph Protein Before and After Molt",
-        sub = "Wells Condo",
+boxplot(hemo_ri ~ pre_post, data = molt_dat_fin,
         xlab = "Pre- vs. Post- Molt",
-        ylab = "Hemolymph Protein",
+        ylab = "Hemolymph Refractive Index",
         col= c('steelblue4', 'plum'),
         subset = condo_id == "WL")
 

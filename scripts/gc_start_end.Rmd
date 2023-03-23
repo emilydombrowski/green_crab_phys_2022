@@ -98,9 +98,6 @@ plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
 
 ```
 
-```{r}
-
-```
 
 ```{r sig testing Initial Hemo Protein in GC conditions}
 

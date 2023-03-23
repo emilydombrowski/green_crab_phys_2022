@@ -21,7 +21,6 @@ gc_dat_fin$hemo_ri <- as.numeric(gc_dat_fin$hemo_ri)
 library(ggplot2)
 library(dplyr)
 library(gridExtra)
-library(scatterplot3d)
 library(MASS)
 
 ```
@@ -45,9 +44,8 @@ gc_dat %>%
         # populates plot with hemo ri and ca info
     geom_point() + geom_smooth(method=lm) + 
         # specifies type of plot -- linear model with 95 percent confidence
-        xlab("Protein Concentration") + 
-        ylab ("Calcium (ppm)") +
-        ggtitle("Hemolymph protein vs. calcium") +
+        xlab("Protein Refractive Index") + 
+        ylab ("Calcium (ppm)")  +
         # renames x and y labels and title
       xlim(3, 12) + 
         # specifies x axis between 3 and 12 for more clear visualization
@@ -83,13 +81,10 @@ boxplot(Ca ~ Color, data = gc_dat,
 
 ```{r}
 
-boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin, 
-      main = "Green Crab Hemolymph Protein vs. Color",
-      sub = 'Wells Condo',
+boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color (on a scale of 1-5)",
-      ylab = "Hemolymph Protein",
-      col= c('white', 'antiquewhite3', 'bisque3', 'burlywood4',
-             'coral4'),
+      ylab = "Hemolymph Refractive Index",
+      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
       subset = condo_id == "WL")
 ```
 
