@@ -86,14 +86,19 @@ plot(hemo_ri ~ outcome, data=se_dat_fin,
 ```
 ```{r Initial Hemo Protein in GC conditions without dead category updated}
 
-out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted', 'Intermolt'))
+out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted'))
+
 # sets parameters to compare removed, molted, and intermolt crabs
 
-plot(hemo_ri ~ out_rmi_fin, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == c("WL","Lab"),
-        xlab = NULL, ylab = 'Protein Refractive Index',
+boxplot(hemo_ri ~ period, data=se_dat_fin,
+        subset = start_end == "start" & condo_id == "WL" & 
+       outcome == c("Removed", "Molted", "Intermolt"),
+        xlab = NULL, ylab = 'Hemolymph Refractive Index',
         col= c('steelblue4', 'plum', 'springgreen4'))
 
+t.test(hemo_ri ~ period, data=se_dat_fin, alternative = "two.sided",
+        subset = start_end == "start" & condo_id == "WL" & 
+       outcome == c("Removed", "Molted"))
 ```
 
 
