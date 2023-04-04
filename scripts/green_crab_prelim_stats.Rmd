@@ -81,7 +81,7 @@ boxplot(Ca ~ Color, data = gc_dat,
 ```{r}
 
 boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
-      xlab = "Hemolymph Color (on a scale of 1-5)",
+      xlab = "Hemolymph Color",
       ylab = "Hemolymph Refractive Index",
       col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
       subset = condo_id == "WL")
