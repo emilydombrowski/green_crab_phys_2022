@@ -98,7 +98,7 @@ boxplot(hemo_ri ~ period, data=se_dat_fin,
 
 t.test(hemo_ri ~ period, data=se_dat_fin, alternative = "two.sided",
         subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted"))
+       outcome == c("Removed", "Molted") & per_days == "TRUE")
 ```
 
 

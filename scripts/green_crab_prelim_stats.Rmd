@@ -73,7 +73,8 @@ car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
 boxplot(Ca ~ Color, data = gc_dat,
       xlab = "Hemolymph Color (on a scale of 1-5)",
       ylab = "Calcium (ppm)",
-      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'))
+      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
+      subset = outcome == c("Molted", "Removed") & condo == "WL")
 
 # appears that calcium increases as hemolymph color darkens
 ```
@@ -84,7 +85,8 @@ boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color",
       ylab = "Hemolymph Refractive Index",
       col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
-      subset = condo_id == "WL")
+      subset = condo_id == "WL" & period == "TRUE" & 
+        outcome == c('Molted', 'Removed'))
 
 ```
 
@@ -125,7 +127,8 @@ TukeyHSD(ri_col_aov_fin, conf.level = 0.95)
 ```{r}
 
 wl_col_aov_fin <- aov (hemo_ri ~ hemo_col, data=gc_dat_fin, 
-                       subset = condo_id == "WL")
+                       subset = condo_id == "WL" & period == "TRUE" 
+                       & outcome == c('Molted', 'Removed'))
 summary(wl_col_aov_fin)
 # type 1 aov used for Tukey test
 # tests between categories: is 1 dif. than 2, etc.
