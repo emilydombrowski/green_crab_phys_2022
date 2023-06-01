@@ -30,13 +30,16 @@ se_dat_fin$start_end <- factor(se_dat_fin$start_end,
                            levels = c('start', 'end'))
 
 se_dat_fin$outcome <- factor(se_dat_fin$outcome, 
-                         levels = c('Removed', 'Dead','Molted',
-                                    'Intermolt'))
+                         levels = c('Removed','Molted'))
 
 library(ggplot2)
 library(dplyr)
 library(car)
 # load relevant libraries
+
+rem_molt_df <- read.csv("../data/rem_molt_df.csv")
+
+subset_df <- read.csv("../data/gc_data_subset_gutzler.csv")
 ```
 
 ```{r initial vs final hemo RI in gc conditions}
@@ -90,15 +93,34 @@ out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted'))
 
 # sets parameters to compare removed, molted, and intermolt crabs
 
-boxplot(hemo_ri ~ period, data=se_dat_fin,
+boxplot(hemo_ri ~ outcome, data=se_dat_fin,
         subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted", "Intermolt"),
+       outcome == c("Removed", "Molted"),
         xlab = NULL, ylab = 'Hemolymph Refractive Index',
         col= c('steelblue4', 'plum', 'springgreen4'))
 
-t.test(hemo_ri ~ period, data=se_dat_fin, alternative = "two.sided",
+boxplot(hemo_ri ~ period, data=se_dat_fin,
         subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted") & per_days == "TRUE")
+       outcome == c("Removed", "Molted", "Intermolt"), 
+       ylab = 'Hemolymph Refractive Index',
+        col= c('steelblue4', 'plum', 'springgreen4'))
+
+t.test(hemo_ri ~ outcome, data=se_dat_fin,
+        subset = start_end == "start" & condo_id == "WL" & 
+       outcome == c("Removed", "Molted"))
+
+t.test(hemo_ri ~ period, data=se_dat_fin,
+        subset = start_end == "start" & condo_id == "WL" & 
+       outcome == c("Removed", "Molted"))
+
+boxplot(hemo_ri ~ period, data=rem_molt_df,
+        xlab = NULL, ylab = 'Hemolymph Refractive Index',
+        col= c('steelblue4', 'plum'))
+
+t.test(hemo_ri ~ period, data=rem_molt_df)
+
+# n = 
+
 ```
 
 

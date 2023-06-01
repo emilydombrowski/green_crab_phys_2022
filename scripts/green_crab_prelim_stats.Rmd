@@ -96,7 +96,7 @@ boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color",
       ylab = "Hemolymph Refractive Index",
       col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
-      subset = condo_id == "WL" & period == "TRUE" & 
+      subset = condo_id == "WL" & 
         outcome == c('Molted', 'Removed'))
 
 ```
@@ -129,8 +129,6 @@ ri_col_aov_fin <- aov (hemo_ri ~ fcol_fin, data=gc_dat_fin,
 summary(ri_col_aov_fin)
 # type 1 aov used for Tukey test
 # tests between categories: is 1 dif. than 2, etc.
-
-knobs(ri_col_aov_fin)
 
 TukeyHSD(ri_col_aov_fin, conf.level = 0.95) 
 ```
