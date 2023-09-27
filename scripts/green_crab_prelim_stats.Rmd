@@ -75,6 +75,8 @@ boxplot(Ca ~ Color, data = gc_dat,
 
 # appears that calcium increases as hemolymph color darkens
 
+
+
 ```
 
 ```{r Ca vs. color}
@@ -82,7 +84,8 @@ boxplot(Ca ~ Color, data = gc_dat,
 boxplot(ca ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color",
       ylab = "Calcium (ppm)",
-      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'), 
+      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
+      
       subset = period == "TRUE", outline = FALSE)
 
 # appears that calcium increases as hemolymph color darkens
@@ -135,14 +138,14 @@ TukeyHSD(ri_col_aov_fin, conf.level = 0.95)
 
 ```{r}
 
-wl_col_aov_fin <- aov (hemo_ri ~ hemo_col, data=gc_dat_fin, 
-                       subset = condo_id == "WL" & period == "TRUE" 
-                       & outcome == c('Molted', 'Removed'))
-summary(wl_col_aov_fin)
-# type 1 aov used for Tukey test
-# tests between categories: is 1 dif. than 2, etc.
-
-TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
+# wl_col_aov_fin <- aov (hemo_ri ~ hemo_col, data=gc_dat_fin, 
+#                        subset = condo_id == "WL" & period == "TRUE" 
+#                        & outcome == c('Molted', 'Removed'))
+# summary(wl_col_aov_fin)
+# # type 1 aov used for Tukey test
+# # tests between categories: is 1 dif. than 2, etc.
+# 
+# TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
 
 ```
 

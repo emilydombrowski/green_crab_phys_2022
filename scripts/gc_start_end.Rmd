@@ -117,7 +117,11 @@ boxplot(hemo_ri ~ period, data=rem_molt_df,
         xlab = NULL, ylab = 'Hemolymph Refractive Index',
         col= c('steelblue4', 'plum'))
 
-t.test(hemo_ri ~ period, data=rem_molt_df)
+boxplot(hemo_ri~outcome, data=rem_molt_df,
+        xlab = NULL, ylab = 'Hemolymph Refractive Index',
+        col= c('steelblue4', 'plum'))
+
+t.test(hemo_ri ~ outcome, data=rem_molt_df)
 
 # n = 
 
