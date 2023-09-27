@@ -20,7 +20,7 @@ se_dat_upd$outcome <- factor(se_dat_upd$outcome,
                          levels = c('Removed', 'Dead','Molted', 
                                     'Intermolt'))
 
-se_dat_fin <- read.csv("../data/se_updated_final.csv")
+se_dat_fin <- read.csv("../data/se_updated_fin_v2.csv")
 
 as.numeric(se_dat_fin$outcome =="Molted")
 
@@ -57,8 +57,8 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat_upd,
         main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
         Molted Crabs',
         xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
-               'springgreen4'))
+        col= c('steelblue4', 'steelblue4', 'plum', 'plum',
+               'springgreen4','springgreen4'))
 ```
 ```{r initial vs final hemo RI in gc conditions cml update}
 boxplot(hemo_ri ~ start_end:outcome, data=se_dat_fin,
