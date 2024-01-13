@@ -25,61 +25,7 @@ library(MASS)
 
 ```
 
-```{r RI vs. Calcium Plot base r}
-
-plot(Ca ~ RI, data = gc_dat, main = "RI vs. Calcium",
-      xlab = "Hemolymph RI (%)", ylab = "Calcium (ppm)")
-abline(lm (Ca ~ RI, data = gc_dat), col = 4, lwd = 3, )
-
-# correlation plot to look at RI vs. Calcium
-# doesn't appear to be a trend
-
-```
-
-```{r RI vs. Calcium Plot ggplot with confidence int.}
-
-gc_dat %>% 
-        # pipes molt data into ggplot
-  ggplot(aes(x = RI, y = Ca)) + 
-        # populates plot with hemo ri and ca info
-    geom_point() + geom_smooth(method=lm) + 
-        # specifies type of plot -- linear model with 95 percent confidence
-        xlab("Protein Refractive Index") + 
-        ylab ("Calcium (ppm)")  +
-        # renames x and y labels and title
-      xlim(3, 12) + 
-        # specifies x axis between 3 and 12 for more clear visualization
-      theme(panel.grid.major = element_blank(),
-              panel.grid.minor = element_blank(), 
-              panel.background = element_blank())
-
-```
-
-```{r ca vs ri significance testing}
-
-ca_ri_mod <- lm(Ca ~ RI, data = gc_dat)
-nobs(ca_ri_mod) # tells that there are 127 observations used in this model
-summary(ca_ri_mod)
-anova(ca_ri_mod) # standard anova
-car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
-
-# taken from all during molt cycle, leading to lots of variation
-# pointing to trend; small r^2 due to assessing crabs at different times of
-# molt cycle
-```
-```{r}
-boxplot(Ca ~ Color, data = gc_dat,
-      xlab = "Hemolymph Color",
-      ylab = "Calcium (ppm)",
-      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'))
-
-# appears that calcium increases as hemolymph color darkens
-
-
-
-```
-
-```{r Ca vs. color}
+```{r Ca vs. color UNFILTERED}
 
 boxplot(ca ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color",
@@ -93,7 +39,7 @@ boxplot(ca ~ hemo_col, data = gc_dat_fin,
 # n = 11, 10, 36, 6, 2
 ```
 
-```{r}
+```{r RI vs. Color FILTERED for WELLS only crabs}
 
 boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       xlab = "Hemolymph Color",
@@ -102,27 +48,12 @@ boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       subset = condo_id == "WL" & 
         outcome == c('Molted', 'Removed'))
 
+# n = 223, 211, 324, 53, and 16
+
 ```
 
 
-```{r interaction effects of RI and Ca on hemo color}
-
-ri_col_mod = lm(Color ~ RI + Ca + RI:Ca, data = gc_dat)
-# model for analyzing the effect of ri and ca on color, as well as the
-# interaction between the two
-
-summary(ri_col_mod)
-anova(ri_col_mod)
-car::Anova(ri_col_mod, type = 3)
-
-car::Anova(lm(Color ~ Ca, data = gc_dat), type = 3)
-car::Anova(lm(Color ~ RI, data = gc_dat), type = 3)
-# interaction model to assess whether or not hemolymph color is altered by
-# the interaction between RI and Ca
-```
-
-
-```{r Tukey HSD test and anova for color and RI fin}
+```{r Tukey HSD test and anova for color and RI fin filtered for WELLS}
 
 fcol_fin <- factor(gc_dat_fin$hemo_col)
 # color is on a scale of 1-5; appears as "numeric"; categorical factor
@@ -148,17 +79,3 @@ TukeyHSD(ri_col_aov_fin, conf.level = 0.95)
 # TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
 
 ```
-
-```{r Tukey HSD test for color and cai}
-
-fcol <- factor(gc_dat$Color)
-# color is on a scale of 1-5; appears as "numeric"; categorical factor
-
-ri_ca_aov <- aov (Ca ~ fcol, data=gc_dat)
-summary(ri_ca_aov)
-
-TukeyHSD(ri_ca_aov, conf.level = 0.95) 
-# run tukey model
-# 2-1, 3-1, 4-1 are significantly different; other categories are the same
-```
-
