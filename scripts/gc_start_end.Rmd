@@ -1,14 +1,5 @@
 ```{r data set up and reorganization}
 
-se_dat <- read.csv("../data/se.csv")
-# read in .csv
-
-se_dat_upd <- read.csv ("../data/molt_dat_cml_wel_11_10_22.csv")
-# updated .csv for 2021-2022 CML and WEL data
-
-se_dat$start_end <- factor(se_dat$start_end, levels = c('start', 'end'))
-se_dat$outcome <- factor(se_dat$outcome, levels = c('Removed', 'Dead',
-                                                    'Molted', 'Intermolt'))
 # define levels as factors for later graphing
 
 se_dat_upd$hemo_ri <- as.numeric(se_dat_upd$hemo_ri)
@@ -42,24 +33,6 @@ rem_molt_df <- read.csv("../data/rem_molt_df.csv")
 subset_df <- read.csv("../data/gc_data_subset_gutzler.csv")
 ```
 
-```{r initial vs final hemo RI in gc conditions}
-boxplot(hemo_ri ~ start_end:outcome, data=se_dat,
-        main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
-        Molted Crabs',
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
-               'springgreen4'))
-
-```
-
-```{r initial vs final hemo RI updated}
-boxplot(hemo_ri ~ start_end:outcome, data=se_dat_upd,
-        main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
-        Molted Crabs',
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'steelblue4', 'plum', 'plum',
-               'springgreen4','springgreen4'))
-```
 ```{r initial vs final hemo RI in gc conditions cml update}
 boxplot(hemo_ri ~ start_end:outcome, data=se_dat_fin,
         main = 'Initial vs. Final Hemolymph Protein of Removed, Dead, and 
@@ -70,58 +43,14 @@ boxplot(hemo_ri ~ start_end:outcome, data=se_dat_fin,
 
 ```
 
-```{r boxplot Initial Hemo Protein in GC conditions}
-plot(hemo_ri ~ outcome, data=se_dat,
-        main = 'Initial Hemolymph Protein in Green Crabs',
-        subset = start_end == "start",
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
 
-# visualizes data looking at different conditions of gc against intermolt
-```
+```{r Initial Hemo Protein vs. outcome}
 
-```{r boxplot Initial Hemo Protein in GC conditions updated jan}
-plot(hemo_ri ~ outcome, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == c("WL", "Lab"),
-        xlab = 'Condition', ylab = 'Hemolymph Protein',
-        col= c('steelblue4', 'plum', 'springgreen4', 'steelblue1'))
-
-```
-```{r Initial Hemo Protein in GC conditions without dead category updated}
-
-out_rmi_fin <- factor(se_dat_fin$outcome, levels = c('Removed', 'Molted'))
-
-# sets parameters to compare removed, molted, and intermolt crabs
-
-boxplot(hemo_ri ~ outcome, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted"),
-        xlab = NULL, ylab = 'Hemolymph Refractive Index',
-        col= c('steelblue4', 'plum', 'springgreen4'))
-
-boxplot(hemo_ri ~ period, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted", "Intermolt"), 
-       ylab = 'Hemolymph Refractive Index',
-        col= c('steelblue4', 'plum', 'springgreen4'))
-
-t.test(hemo_ri ~ outcome, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted"))
-
-t.test(hemo_ri ~ period, data=se_dat_fin,
-        subset = start_end == "start" & condo_id == "WL" & 
-       outcome == c("Removed", "Molted"))
-
-boxplot(hemo_ri ~ period, data=rem_molt_df,
+boxplot(hemo_ri~outcome, data=subset_df,
         xlab = NULL, ylab = 'Hemolymph Refractive Index',
         col= c('steelblue4', 'plum'))
 
-boxplot(hemo_ri~outcome, data=rem_molt_df,
-        xlab = NULL, ylab = 'Hemolymph Refractive Index',
-        col= c('steelblue4', 'plum'))
-
-t.test(hemo_ri ~ outcome, data=rem_molt_df)
+t.test(hemo_ri ~ outcome, data=subset_df)
 
 # n = 
 
@@ -149,25 +78,6 @@ TukeyHSD(fin_ri_aov, conf.level = 0.95)
 
 ```
 
-```{r}
-boxplot(hemo_color ~ start_end:outcome, data=se_dat,
-        main = 'Initial vs. Final Hemolymph Color of Removed, Dead, and 
-        Molted Crabs',
-        xlab = 'Condition', ylab = 'Hemolymph Color',
-        col= c('steelblue4', 'steelblue4', 'plum', 'plum', 'springgreen4',
-               'springgreen4'))
-
-```
-
-```{r initial hemo color of crabs}
-
-plot(hemo_color ~ outcome, data=se_dat, 
-    main = 'Initial Hemolymph Color of Removed, Dead, and
-    Molted Crabs', subset = start_end == "start",
-    xlab = 'Condition', ylab = 'Hemolymph Color',
-    col= c('steelblue4', 'plum', 'springgreen4'))
-
-```
 
 ```{r glm for hemo color}
 
@@ -348,7 +258,11 @@ ggplot(Pred_data3, aes(x=hemo_ri, y=outcome)) + geom_point() +
 
 ```
 
-```{r}
+```{r Initial Hemolymph RI vs. Color}
+
+# Box plot looking at hemo color vs. RI in only initial 
+# crabs. 
+
 boxplot(hemo_ri ~ hemo_col, data = se_dat_fin, 
       main = "Initial Green Crab Hemolymph Protein vs. Color",
       sub = 'Wells Condo',
