@@ -3,6 +3,9 @@
 # read in relevant documents for this data
 # preliminary data used for calcium etc.
 
+# data used to produce calcium plots 
+gc_dat <- read.csv("../data/prelim_gc_data.csv")
+
 # updated with full data set 2023-01-06
 
 gc_dat_fin <- read.csv("../data/Condo_Data_Raw_CML_WEL_1_6_23.csv")
@@ -107,4 +110,36 @@ TukeyHSD(ri_col_aov_fin, conf.level = 0.95)
 # 
 # TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
 
+```
+
+
+```{r RI vs. Calcium Plot ggplot with confidence int.}
+
+# Preliminary visualization from older dataset
+
+gc_dat %>% 
+        # pipes molt data into ggplot
+  ggplot(aes(x = RI, y = Ca)) + 
+        # populates plot with hemo ri and ca info
+    geom_point() + geom_smooth(method=lm) + 
+        # specifies type of plot -- linear model with 95 percent confidence
+        xlab("Hemolymph Refractive Index") + 
+        ylab ("Calcium (ppm)")  +
+        # renames x and y labels and title
+      xlim(3, 12) + 
+        # specifies x axis between 3 and 12 for more clear visualization
+      theme(panel.grid.major = element_blank(),
+              panel.grid.minor = element_blank(), 
+              panel.background = element_blank())
+```
+
+```{r ca vs ri significance testing}
+ca_ri_mod <- lm(Ca ~ RI, data = gc_dat)
+nobs(ca_ri_mod) # tells that there are 127 observations used in this model
+summary(ca_ri_mod)
+anova(ca_ri_mod) # standard anova
+car::Anova(ca_ri_mod, type = 3) # type 3 anova for significance testing
+# taken from all during molt cycle, leading to lots of variation
+# pointing to trend; small r^2 due to assessing crabs at different times of
+# molt cycle
 ```
