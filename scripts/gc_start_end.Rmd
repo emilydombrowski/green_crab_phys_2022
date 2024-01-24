@@ -1,8 +1,10 @@
 ```{r data set up and reorganization}
 
+se_dat_upd <- read.csv("../data/se_updated_final.csv")
+
 # define levels as factors for later graphing
 
-se_dat_upd$hemo_ri <- as.numeric(se_dat_upd$hemo_ri)
+se_dat_upd$hemo_ri <- as.numeric("../data/se_dat_upd$hemo_ri")
 
 # se_dat_upd$start_end <- factor(se_dat_upd$start_end, 
                           # levels = c('start', 'end'))

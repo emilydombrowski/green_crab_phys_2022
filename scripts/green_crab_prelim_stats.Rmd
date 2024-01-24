@@ -1,9 +1,19 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Green crab data processing
+
+# Data read in
+These are the data sets, filtering steps, and libraries used to construct plots and statistical analyses. The main data cleaning step involved changing variable types (changing categorical factors to numeric, for example).
 ```{r data read in}
 
 # read in relevant documents for this data
 # preliminary data used for calcium etc.
 
-# data used to produce calcium plots 
+# data used to produce calcium plots
+# calcium data came from a limited set of crabs
 gc_dat <- read.csv("../data/prelim_gc_data.csv")
 
 # updated with full data set 2023-01-06
@@ -29,24 +39,7 @@ library(MASS)
 library(janitor)
 ```
 
-```{r Ca vs. color UNFILTERED...included WELLS and CML data}
-
-# Two locations were used for data collection. Ultimately, Coastal
-# Marine Lab (CML) data was not included due to inconsistencies
-# in data collection. This was a preliminary visualization
-
-boxplot(ca ~ hemo_col, data = gc_dat_fin,
-      xlab = "Hemolymph Color",
-      ylab = "Calcium (ppm)",
-      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
-      
-      subset = period == "TRUE", outline = FALSE)
-
-# appears that calcium increases as hemolymph color darkens
-# n = 25 individual crabs
-# n = 11, 10, 36, 6, 2
-```
-
+# RI vs. Color Plots
 ```{r RI vs. Color FILTERED for WELLS only crabs}
 
 boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
@@ -55,10 +48,26 @@ boxplot(hemo_ri ~ hemo_col, data = gc_dat_fin,
       col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
       subset = condo_id == "WL" & 
         outcome == c('Molted', 'Removed'))
+```
+```{r Tukey HSD test and anova for color and RI fin filtered for WELLS}
 
-# n = 223, 211, 324, 53, and 16
+fcol <- factor(gc_dat_fin$hemo_col)
+# color is on a scale of 1-5; appears as "numeric"; categorical factor
+# stores the variable hemolymph color as a factor (fcol)
+
+ri_col_aov <- aov (hemo_ri ~ fcol, data=gc_dat_fin,
+                       subset = condo_id == "WL" & 
+                         outcome == c('Molted', 'Removed'))
+
+summary(ri_col_aov)
+# type 1 aov used for Tukey test
+# tests between categories: is 1 dif. than 2, etc.
+
+TukeyHSD(ri_col_aov, conf.level = 0.95) 
 ```
 
+# New data frame to check previous results
+To make sure that everything was showing up how I intended in the other figures and to double check the subsetting, I made a new data frame titled *filt* with only crabs from wells that molted and were removed. This data frame only contains the crab id, hemolymph ri, and hemolymph colors. I reconstructed the same boxplot and anova/tukey hsd testing.
 ```{r}
 gc_dat_clean <- clean_names(gc_dat_fin)
 # use janitor to clean
@@ -82,36 +91,31 @@ boxplot(hemo_ri ~ hemo_col, data = filt,
 
 # n = 83, 85, 125, 21, 7
 # gc n = 92
-```
 
-
-```{r Tukey HSD test and anova for color and RI fin filtered for WELLS}
-
-fcol_fin <- factor(gc_dat_fin$hemo_col)
+fcol_filt <- factor(filt$hemo_col)
 # color is on a scale of 1-5; appears as "numeric"; categorical factor
 
-ri_col_aov_fin <- aov (hemo_ri ~ fcol_fin, data=gc_dat_fin,
-                       subset = condo_id == "WL")
-summary(ri_col_aov_fin)
+ri_col_aov_filt <- aov (hemo_ri ~ fcol_filt, data=filt)
+summary(ri_col_aov_filt)
 # type 1 aov used for Tukey test
 # tests between categories: is 1 dif. than 2, etc.
 
-TukeyHSD(ri_col_aov_fin, conf.level = 0.95) 
+TukeyHSD(ri_col_aov_filt, conf.level = 0.95) 
 ```
+# Calcium plots
+```{r Ca vs. color}
 
-```{r}
+boxplot(ca ~ hemo_col, data = gc_dat_fin,
+      xlab = "Hemolymph Color",
+      ylab = "Calcium (ppm)",
+      col= c('white', 'aliceblue', 'bisque', 'darksalmon','coral'),
+      
+      subset = period == "TRUE", outline = FALSE)
 
-# wl_col_aov_fin <- aov (hemo_ri ~ hemo_col, data=gc_dat_fin, 
-#                        subset = condo_id == "WL" & period == "TRUE" 
-#                        & outcome == c('Molted', 'Removed'))
-# summary(wl_col_aov_fin)
-# # type 1 aov used for Tukey test
-# # tests between categories: is 1 dif. than 2, etc.
-# 
-# TukeyHSD(wl_col_aov_fin, conf.level = 0.95) 
-
+# appears that calcium increases as hemolymph color darkens
+# n = 25 individual crabs
+# n = 11, 10, 36, 6, 2
 ```
-
 
 ```{r RI vs. Calcium Plot ggplot with confidence int.}
 
